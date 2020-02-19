@@ -77,8 +77,6 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      bash -x $HOME/start-jupyter.sh ; \
-     bash -x $HOME/stop-jupyter.sh
-#
-# preserve it running forever
-CMD  sleep infinity
+     bash -x $HOME/stop-jupyter.sh ; \
+     sleep infinity
 #
