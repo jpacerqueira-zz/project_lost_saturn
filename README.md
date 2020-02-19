@@ -27,9 +27,7 @@
         
      Run Docker exec to start Jupyter after setup above finishes
 
-        ~ mac-u$ docker exec -it  lost_saturn  /bin/bash -c "cd ; bash -x library_tools/install-jupyter-support-packs.sh ; sleep 1 ; exit"
-        ~ mac-u$ docker exec -it  lost_saturn  /bin/bash -c "cd ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
-
+        ~ mac-u$ docker exec -it lost_saturn /bin/bash -c "cd ;$HOME/anaconda3/bin/activate jupyter ;  bash -x library_tools/install-jupyter-support-packs.sh ; sleep 1 ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
 
 
    Option 2
