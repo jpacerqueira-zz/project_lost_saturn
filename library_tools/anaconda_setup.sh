@@ -19,4 +19,4 @@ mkdir -p $HOME/library_tools
 mv *.sh $HOME/library_tools
 #
 # conda deactivate
-$HOME/anaconda3/bin/conda deactivate
+#$HOME/anaconda3/bin/conda deactivate
