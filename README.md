@@ -44,6 +44,8 @@
         ~ wsl-u$  cd ; cp project_lost_saturn/library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
+   ![lost_saturn - container - Jupyter Notebooks DataScience](images/Docker_container_project_lost_saturn_v1.png)
+
    Issues and Workarrounds 
 =========
 
