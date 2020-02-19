@@ -72,6 +72,7 @@ USER notebookuser
 CMD export HOME=/home/notebookuser
 
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
+     sleep 59 ; \
      bash -x $HOME/setup-container-tools.sh .sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
