@@ -1,2 +1,2 @@
 default:
-	docker build -t gftjoao/datascience-fullstack-v1.0:latest .
+	docker build -t jpacerqueira83/datascience-fullstack-vm1:latest .
