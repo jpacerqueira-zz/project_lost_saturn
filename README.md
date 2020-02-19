@@ -37,11 +37,11 @@
 
      Consume package 
 
-        ~ wsl-u$  cd ; git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
+        ~ wsl-u$  cd ; git clone https://github.com/jpacerqueira/project_lost_saturn.git
 
 
      Execute installation
-        ~ wsl-u$  cd ; cp Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
+        ~ wsl-u$  cd ; cp project_lost_saturn/library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
    Issues and Workarrounds 
