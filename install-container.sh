@@ -7,8 +7,10 @@ sleep 480
 HERES=$(pwd)
 FILES=Setup-System-Java-Spark-h2o.ai-pyarrow.ipynb # ipynb in test to load addicional libraries
 #
-if [ -f "$HERES/notebooks/$FILES"] ; then
-   docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x jupyter nbconvert --to notebook --execute --allow-errors --ExecutePreporcessor.timeout=480 notebooks/$FILES "
+if [ -f "$HERES/notebooks/$FILES" ]; then
+   ARGS1="nbconvert --to notebook --execute --allow-errors --ExecutePreporcessor.timeout=480 notebooks/$FILES "
+   docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x ~/anaconda3/bin/jupyter $ARGS1 "
+   docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
 else
    docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
 fi
