@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 #
-docker run  -itd -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
-echo "  wait 6 min "
-sleep 480
+DOCKERLS=$(docker ps | grep lost_saturn | awk -F' ' '{ print $15 }')
+echo "$DOCKERLS"
+#
+if [ $DOCKERLS != "lost_saturn" ]; then
+   docker run  -itd -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
+   echo "  wait 6 min "
+   sleep 480
+fi
 #
 HERES=$(pwd)
 FILES=Setup-System-Java-Spark-h2o.ai-pyarrow.ipynb # ipynb in test to load addicional libraries
