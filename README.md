@@ -53,20 +53,20 @@
 
    Issue 1
 ===
-     It is recommended to default OpenJDK8 and not OpenJDK11 or JAVA8(Oracle with an License)
+   It is recommended to default OpenJDK8 and not OpenJDK11 or JAVA8(Oracle with an License)
         Installation : https://www.linuxuprising.com/2019/02/install-any-oracle-java-jdk-version-in.html
         This installation resolve my issue here : https://github.com/jupyter/jupyter/issues/248
 
 
    Issue 2
 ===
-     Mount Additional driver in Docker Containers for optional JAVA8(Oracke)
+   Mount Additional driver in Docker Containers for optional JAVA8(Oracke)
          Your local container may require to mount large files (git LFS) like Oracle JAVA installer
 
 
    Issue 3
 ===
-     If Jupyter tools spark + h2o.ai + delta_lake:0.3 : are not responsive ??
+   If Jupyter tools spark + h2o.ai + delta_lake:0.3 : are not responsive
 
                 Please re-install in the following order
 
