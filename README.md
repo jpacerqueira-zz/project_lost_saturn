@@ -46,15 +46,42 @@
 
    ![lost_saturn - container - Jupyter Notebooks DataScience](images/Docker_container_project_lost_saturn_v1.png)
 
-   Issues and Workarrounds 
+
+   Issues and Workarrounds
 =========
 
-     It is recommended to use JAVA8(Oracle) or OpenJDK8 and not OpenJDK11
+
+   Issue 1
+===
+     It is recommended to default OpenJDK8 and not OpenJDK11 or JAVA8(Oracle with an License)
         Installation : https://www.linuxuprising.com/2019/02/install-any-oracle-java-jdk-version-in.html
-        This installation resolve my issue here : https://github.com/jupyter/jupyter/issues/248    
-    
-     Mount Additional driver in Docker Containers
-         Your local container may require to mount large files like Oracle JAVA installer
+        This installation resolve my issue here : https://github.com/jupyter/jupyter/issues/248
+
+
+   Issue 2
+===
+     Mount Additional driver in Docker Containers for optional JAVA8(Oracke)
+         Your local container may require to mount large files (git LFS) like Oracle JAVA installer
+
+
+   Issue 3
+===
+     If Jupyter tools spark + h2o.ai + delta_lake:0.3 : are not responsive ??
+
+                Please re-install in the following order
+
+               stop-jupyter ; install-jupyter-support-packs ; start-jupyter.sh
+
+        (base) notebookuser@1662e83c8269:~$ pwd
+        /home/notebookuser
+        (base) notebookuser@1662e83c8269:~$ ls
+        anaconda3  install-jupyter-support-packs.sh  java  knode_ds.err  knode_ds.out  library_tools  notebooks  python-additional-libraries  spark  start-jupyter.sh  stop-jupyter.sh
+        (base) notebookuser@1662e83c8269:~$ netstat -anp | grep 9003
+        (base) notebookuser@1662e83c8269:~$ bash -x stop-jupyter.sh
+        (base) notebookuser@1662e83c8269:~$ bash -x install-jupyter-support-packs.sh
+        (base) notebookuser@1662e83c8269:~$ bash -x start-jupyter.sh
+        (base) notebookuser@1662e83c8269:~$ tail -n 25 notebooks/jupyter.log
+
 
 
    Licensing
