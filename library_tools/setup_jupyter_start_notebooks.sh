@@ -45,7 +45,7 @@ source ~/.bashrc
 #
 ### Workarround for Delta Lake format
 ###
-export PACKAGES="io.delta:delta-core_2.11:0.3.0"
+export PACKAGES="io.delta:delta-core_2.11:0.5.0"
 export PYSPARK_SUBMIT_ARGS="--packages ${PACKAGES}  pyspark-shell"
 ###
 # workarround h2o for http://localhost in notebook session
