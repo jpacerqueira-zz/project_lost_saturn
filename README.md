@@ -93,7 +93,12 @@
  
   Apache Spark, Apache Arrow, H2o.ai.jar and Open-JDK8 are licensed under the Apache 2.0 License . Python, PyArrow and pi py H2o.ai under the GNU GPL License
            
-  The end product here would benefit for an DevOps engineer with experience in docker-compose    
+  The end product here would benefit for an DevOps engineer with experience in docker-compose or Terraform, feel free to contribute.
+  
+  Usefull to experiment in the Latest Frameworks 
+  
+  [Delta.io opensource DeltaLake](https://delta.io)
+  [Delta Lake Sink readStream writeStream](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
+  [Spark Structure Streaming Programming with Delta Late](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
     
-  If you are a DataScience expert use as it is, improve it, fix it, share it back!
-
+  If you are a Data engineer/scientist expert use as it is, improve it, fix it, share it back!
