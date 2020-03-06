@@ -95,10 +95,12 @@
            
   The end product here would benefit for an DevOps engineer with experience in docker-compose or Terraform, feel free to contribute.
   
-  Usefull to experiment in the Latest Frameworks 
+  Usefull to experiment in the latest frameworks : 
   
   [Delta.io opensource DeltaLake](https://delta.io)
+  
   [Delta Lake Sink readStream writeStream](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
+  
   [Spark Structure Streaming Programming with Delta Late](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
     
-  If you are a Data engineer/scientist expert use as it is, improve it, fix it, share it back!
+  If you are a proeficient Data Engineer/Scientist use as it is, improve it, fix it, share it back!
