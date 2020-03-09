@@ -68,7 +68,7 @@
 
    Issue 3
 ===
-   If Jupyter tools ( spark + h2o.ai + delta_lake:0.3) are not responsive in jupyter/notebook cells
+   If Jupyter tools ( spark + h2o.ai + delta_lake:0.3) are not responsive in 1st time usage
                
                 Please re-install in the following order 
 
