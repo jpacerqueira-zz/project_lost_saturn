@@ -49,7 +49,8 @@ CMD mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/data/delta_real_estate_term_definitions ; \
     mkdir -p  /home/notebookuser/notebooks/data/delta_terms_words_ngrams_real_estate ; \
     mkdir -p  /home/notebookuser/notebooks/data/terms_words_mortgages ; \
-    mkdir -p  /home/notebookuser/notebooks/data/boston-public-schools
+    mkdir -p  /home/notebookuser/notebooks/data/boston-public-schools ; \
+    mkdir -p  /home/notebookuser/notebooks/covid19/korean
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/
@@ -60,6 +61,8 @@ ADD notebooks/data/delta_real_estate_term_definitions/*.*  /home/notebookuser/no
 ADD notebooks/data/delta_terms_words_ngrams_real_estate/*.*  /home/notebookuser/notebooks/data/delta_terms_words_ngrams_real_estate/
 ADD notebooks/data/terms_words_mortgages/*.*  /home/notebookuser/notebooks/data/terms_words_mortgages/
 ADD notebooks/data/boston-public-schools/*.*  /home/notebookuser/notebooks/data/boston-public-schools/
+ADD notebooks/covid19/*.* /home/notebookuser/notebooks/covid19/
+ADD notebooks/covid19/korean/*.* /home/notebookuser/notebooks/covid19/korean/
 
 ADD setup-container-tools.sh /home/notebookuser/setup-container-tools.sh
 
