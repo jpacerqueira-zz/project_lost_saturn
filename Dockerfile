@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update -y && apt-get install -y apt-utils \
     sudo
+RUN apt-get upgrade -y
 RUN \
     groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
     sed -i /etc/sudoers -re 's/^%sudo.*/%sudo ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
