@@ -11,9 +11,10 @@ RUN \
     echo "Customized the sudoers file for passwordless access to the notebookuser user!" && \
     echo "notebookuser user:";  su - notebookuser -c id
 
-RUN apt-get update -y
-RUN apt-get upgrade -y
+RUN export DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update -y && apt-get install -y curl \
+    tzdata \
     net-tools \
     iptables \
     iptables-persistent \
