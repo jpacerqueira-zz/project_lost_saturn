@@ -1,7 +1,5 @@
 FROM ubuntu:18.04
 
-RUN export DEBIAN_FRONTEND=noninteractive
-
 RUN apt-get update -y && apt-get install -y apt-utils \
     sudo
 RUN \
@@ -13,7 +11,8 @@ RUN \
     echo "Customized the sudoers file for passwordless access to the notebookuser user!" && \
     echo "notebookuser user:";  su - notebookuser -c id
 
-RUN apt-get update -y && apt-get install -y curl \
+RUN export DEBIAN_FRONTEND=noninteractive ; \
+    apt-get update -y && apt-get install -y curl \
     tzdata \
     net-tools \
     iptables \
