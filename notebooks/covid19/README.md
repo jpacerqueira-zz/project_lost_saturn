@@ -20,3 +20,4 @@ An adaptive online Kalman filter provides us very good one-day predictions for e
 ### Links to Medium article can be found here
 * [Using Kalman Filter to Predict Corona Virus Spread (Feb 22)](https://medium.com/@rank23/using-kalman-filter-to-predict-corona-virus-spread-72d91b74cc8)
 * [Coronavirus Spread Updated Prediction Using Kalman Filter (Mar 1)](https://medium.com/analytics-vidhya/coronavirus-updated-prediction-using-kalman-filter-3ef8b7a72409)
+
