@@ -52,6 +52,7 @@ CMD mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/korean ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/data ; \ 
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps ; \
+    mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps/archive ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/my_old_notebooks
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
