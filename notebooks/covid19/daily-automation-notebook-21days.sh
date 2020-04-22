@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
 #
 HOME=/home/notebookuser
 source $HOME/.profile
