@@ -50,10 +50,10 @@ CMD mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/data/terms_words_mortgages ; \
     mkdir -p  /home/notebookuser/notebooks/data/boston-public-schools ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/korean ; \
-    mkdir -p  /home/notebookuser/notebooks/covid19/data ; \ 
+    mkdir -p  /home/notebookuser/notebooks/covid19/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps/archive ; \
-    mkdir -p  /home/notebookuser/notebooks/covid19/my_old_notebooks
+    mkdir -p  /home/notebookuser/noetbooks/covid19/my_old_notebooks
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/
@@ -81,6 +81,9 @@ RUN ln -fs /usr/share/zoneinfo/GMT /etc/localtime
 EXPOSE 9003/tcp 54321/tcp
 
 RUN export DEBIAN_FRONTEND=interactive
+
+#Expose notebook cronjobs
+RUN (echo "20 6 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh" > /etc/cron.daily/notebooks-jupyter)
 
 USER notebookuser
 
