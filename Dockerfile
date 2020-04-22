@@ -96,6 +96,7 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      bash -x $HOME/start-jupyter.sh ; \
+     mkdir -p $HOME/crontab ; \
      conda install --quiet --yes \
      'r-base=3.5.1' \
      'r-rodbc=1.3*' \
