@@ -6,8 +6,8 @@ echo "$DOCKERLS"
 if [[ $DOCKERLS != "lost_saturn" ]]; then
 #   docker run  -itd -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
    docker run  -itd -p 9003:9003 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
-   echo "  wait 10 min  - lost_saturn - full setup in progress "
-   sleep 600
+   echo "  wait 12 min  - lost_saturn - full setup in progress "
+   sleep 720
 fi
 #
 HERES=$(pwd)
