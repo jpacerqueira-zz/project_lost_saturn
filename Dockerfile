@@ -80,6 +80,7 @@ RUN chown notebookuser:notebookuser -R /home/notebookuser
 RUN ln -fs /usr/share/zoneinfo/GMT /etc/localtime
 
 EXPOSE 9003/tcp
+#EXPOSE 54321/tcp
 
 RUN export DEBIAN_FRONTEND=interactive
 
