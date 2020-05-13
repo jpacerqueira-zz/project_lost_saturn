@@ -13,7 +13,8 @@ if [[ $DOCKERLS != "lost_saturn" ]] && [[ -f "$HERES/notebooks/$FILES" ]]; then
    sleep 720
    ARGS1="nbconvert --to notebook --execute --allow-errors --ExecutePreporcessor.timeout=480 notebooks/$FILES "
    docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x ~/anaconda3/bin/jupyter $ARGS1 "
-   docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x stop-jupyter.sh ; bash -x install-jupyter-support-packs.sh ;  bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
+   docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x start-jupyter.sh ; bash -x stop-jupyter.sh ; sleep 4 ; echo 'smoke test-1' "
+   docker exec -it lost_saturn /bin/bash -c "cd ; source .bashrc ; bash -x install-jupyter-support-packs.sh ;  bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
    echo "  wait 3 minutes  - lost_saturn - full setup in progress - STEP2"
    sleep 240
    echo "Setup Completed : use jupyter token above "
