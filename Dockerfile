@@ -53,7 +53,7 @@ CMD mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps/archive ; \
-    mkdir -p  /home/notebookuser/noetbooks/covid19/my_old_notebooks
+    mkdir -p  /home/notebookuser/noetbooks/covid19/archive
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/
@@ -69,7 +69,7 @@ ADD notebooks/covid19/korean/*.* /home/notebookuser/notebooks/covid19/korean/
 ADD notebooks/covid19/data/*.* /home/notebookuser/notebooks/covid19/data/
 ADD notebooks/covid19/heatmaps/*.* /home/notebookuser/notebooks/covid19/heatmaps/
 ADD notebooks/covid19/heatmaps/archive/*.* /home/notebookuser/notebooks/covid19/heatmaps/archive/
-ADD notebooks/covid19/my_old_notebooks/*.* /home/notebookuser/notebooks/covid19/my_old_notebooks/
+ADD notebooks/covid19/archive/*.* /home/notebookuser/notebooks/covid19/archive/
 
 ADD setup-container-tools.sh /home/notebookuser/setup-container-tools.sh
 
