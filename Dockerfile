@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 
 RUN apt-get update -y && apt-get install -y apt-utils \
-    sudo
+    sudo \
+    sed
 RUN apt-get upgrade -y
 RUN \
     groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
@@ -53,7 +54,7 @@ CMD mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps/archive ; \
-    mkdir -p  /home/notebookuser/noetbooks/covid19/archive
+    mkdir -p  /home/notebookuser/notebooks/covid19/archive 
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/
