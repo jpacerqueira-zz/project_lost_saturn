@@ -4,10 +4,9 @@
 ##
 #FROM ubuntu:18.04
 #FROM ubuntu:20.04
-FROM ubunto:bionic-20200526
+FROM ubunto:bionic
 ##
-##docker pull ubuntu:bionic-20200526
-##
+#
 ##################
 ##
 #
