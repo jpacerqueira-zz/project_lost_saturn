@@ -1,13 +1,11 @@
 #
 ##
-## Retrofited to Bionic from Focal Ubuntu
+## Retrofited to 18.4 LTS Bionic from Focal Ubuntu
 ##
-#FROM ubuntu:18.04
+FROM ubuntu:18.04
+##
+#FROM ubunto:bionic
 #FROM ubuntu:20.04
-FROM ubunto:bionic
-##
-#
-##################
 ##
 #
 RUN apt-get update -y && apt-get install -y apt-utils \
