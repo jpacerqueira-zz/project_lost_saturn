@@ -1,5 +1,12 @@
-FROM ubuntu:18.04
-
+#
+##
+## Rebased from Bionic to Focal Ubuntu
+##
+#FROM ubuntu:18.04
+FROM ubuntu:20.04
+##################
+##
+#
 RUN apt-get update -y && apt-get install -y apt-utils \
     sudo \
     sed

@@ -8,18 +8,18 @@ FILEAN=$1
 #source $HOMEY/.profile
 #cd $HOMEY/notebooks/covid19/heatmaps
 #
-sed -i 's/\n //g' $FILEAN
-sed -i 's/\n //g' $FILEAN
-sed -i 's/\n //g' $FILEAN
-sed -i 's/\n //g' $FILEAN
+sed -i -e 's/\n //g' $FILEAN
+sed -i -e 's/\n //g' $FILEAN
+sed -i -e 's/\n //g' $FILEAN
+sed -i -e 's/\n //g' $FILEAN
 #
-sed -i 's/   / /g' $FILEAN
-sed -i 's/   / /g' $FILEAN
-sed -i 's/   / /g' $FILEAN
-sed -i 's/   / /g' $FILEAN
+sed -i -e 's/   / /g' $FILEAN
+sed -i -e 's/   / /g' $FILEAN
+sed -i -e 's/   / /g' $FILEAN
+sed -i -e 's/   / /g' $FILEAN
 #
-sed -i 's/  / /g' $FILEAN
-sed -i 's/  / /g' $FILEAN
-sed -i 's/  / /g' $FILEAN
+sed -i -e 's/  / /g' $FILEAN
+sed -i -e 's/  / /g' $FILEAN
+sed -i -e 's/  / /g' $FILEAN
 #
 #
