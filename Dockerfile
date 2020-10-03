@@ -1,9 +1,13 @@
 #
 ##
-## Rebased from Bionic to Focal Ubuntu
+## Retrofited to Bionic from Focal Ubuntu
 ##
 #FROM ubuntu:18.04
-FROM ubuntu:20.04
+#FROM ubuntu:20.04
+FROM ubunto:bionic-20200526
+##
+##docker pull ubuntu:bionic-20200526
+##
 ##################
 ##
 #
