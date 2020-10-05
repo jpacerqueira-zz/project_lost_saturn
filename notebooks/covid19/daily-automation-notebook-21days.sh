@@ -12,7 +12,7 @@ $HOME/anaconda3/bin/jupyter \
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days-displayFuelBigData.html      
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days-displayFuelBigData.html
 sleep 1
-rm -rf  /tmp/*
+#rm -rf  /tmp/*
 # 21DayForecast
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=1800 \
@@ -21,7 +21,7 @@ $HOME/anaconda3/bin/jupyter \
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days-displayFuelBigData.html
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days-displayFuelBigData.html
 sleep 1
-rm -rf  /tmp/*
+#rm -rf  /tmp/*
 # 42DayForecast
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=1800 \
@@ -30,7 +30,7 @@ $HOME/anaconda3/bin/jupyter \
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days-displayFuelBigData.html
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days-displayFuelBigData.html
 sleep 1
-rm -rf  /tmp/*
+#rm -rf  /tmp/*
 # 63DayForecast
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=1800 \
@@ -39,7 +39,9 @@ $HOME/anaconda3/bin/jupyter \
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred63Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred63Days-displayFuelBigData.html
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred63Days-displayFuelBigData.html
 sleep 1
-rm -rf  /tmp/*
+#
 #
 cp $HOME/notebooks/covid19/data/World\ v2\ --\ Confirmed\ -\ 63Day\ Forecast\ --\ train\ ${DATENB}.csv $HOME/notebooks/covid19/data/World\ v2\ --\ Confirmed\ -\ 1Day\ Forecast\ --\ train\ ${DATENB}.csv
+#
+rm -rf  /tmp/*
 #
