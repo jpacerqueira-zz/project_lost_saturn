@@ -132,5 +132,6 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      conda clean -tipsy && \
      fix-permissions $HOME ; \
      bash -x $HOME/stop-jupyter.sh ; \
-     sleep infinity
+     sleep 720
+CMD  sleep infinity
 #
