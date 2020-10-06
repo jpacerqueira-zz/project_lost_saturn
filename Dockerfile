@@ -141,8 +141,8 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
      bash -x $HOME/start-jupyter.sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
-     bash -x $HOME/install-jupyter-support-packs.sh ; \
      sudo bash -x $HOME/library_tools/setup_install_R_lang.sh ; \
+     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      bash -x $HOME/stop-jupyter.sh ; \
      mkdir -p $HOME/crontab ; \
      ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 4 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
