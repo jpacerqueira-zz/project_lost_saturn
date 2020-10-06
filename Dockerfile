@@ -43,13 +43,13 @@ ADD library_tools/*.sh /home/notebookuser/
 
 RUN chmod 777 /home/notebookuser/*.sh
 
-CMD mkdir -p /home/notebookuser/java/
+RUN mkdir -p /home/notebookuser/java/
 
 ADD java_tools/*.* /home/notebookuser/java/
 
 RUN chmod 777 /home/notebookuser/java/*.sh
 
-CMD mkdir -p  /home/notebookuser/notebooks/data ; \
+RUN mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/data/delta_business_terms ; \
     mkdir -p  /home/notebookuser/notebooks/data/delta_conviva ; \
     mkdir -p  /home/notebookuser/notebooks/data/delta_prostate ; \
@@ -136,11 +136,8 @@ CMD export HOME=/home/notebookuser
 #     sleep infinity
 #
 #
-CMD  export HOME=/home/notebookuser ; cd $HOME ; \
-     sleep 9 ; \
+RUN  sleep 3 ; export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
-     bash -x $HOME/start-jupyter.sh ; \
-     sudo chown notebookuser:notebookuser -R $HOME ; \
      conda install --quiet --yes \
      'r-base=3.6*' \
      'r-rodbc=1.3*' \
@@ -165,9 +162,16 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      'r-hexbin=1.27*' && \
      conda clean -tipsy && \
      fix-permissions $HOME ; \ 
+     sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
-     bash -x $HOME/stop-jupyter.sh ; \
      mkdir -p $HOME/crontab ; \
      ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 4 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
-     sleep infinity
+     sleep 1
+#
+CMD sleep 780 ; \
+    export HOME=/home/notebookuser ; cd $HOME ; \
+    bash -x $HOME/start-jupyter.sh ; \
+    sudo service cron stop ; sudo service cron reload ; sudo servive cron start ; \
+    tail -n 30 $HOME/notebooks/jupyter.log ; \
+    sleep infinity
 #
