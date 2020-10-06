@@ -136,7 +136,7 @@ CMD export HOME=/home/notebookuser
 #     sleep infinity
 #
 #
-RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
+RUN  sleep 3 ; export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \

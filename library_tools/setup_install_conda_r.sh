@@ -38,5 +38,5 @@ pip install pyweatherbit==2.0.0
 pip install gmplot==1.2.0
 pip install folium==0.10.1
 #
-echo -e " install.packages(\"readr\",repos=\"http://cloud.r-project.org/\", type=\"source\") \n install.packages(\"pracma\") \n install.packages(\"Metrics\") \n install.packages(\"reshape\") \n library(readr) \n sessionInfo() " > $HOME/R_install_packages.R
+echo -e " install.packages(\"cli\") \n install.packages(\"readr\",repos=\"http://cloud.r-project.org/\", type=\"source\") \n install.packages(\"pracma\") \n install.packages(\"Metrics\") \n install.packages(\"reshape\") \n library(readr) \n sessionInfo() " > $HOME/R_install_packages.R
 R -f $HOME/R_install_packages.R
