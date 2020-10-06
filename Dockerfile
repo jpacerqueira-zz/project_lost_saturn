@@ -168,7 +168,7 @@ RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
      ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 4 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
      sleep 1
 #
-CMD sleep 2 ; \
+CMD sleep 5 ; \
     export HOME=/home/notebookuser ; cd $HOME ; \
     bash -x $HOME/start-jupyter.sh ; \
     sudo service cron reload ; \
