@@ -132,5 +132,6 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      conda clean -tipsy && \
      fix-permissions $HOME ; \
      bash -x $HOME/stop-jupyter.sh ; \
+     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      sleep infinity
 #
