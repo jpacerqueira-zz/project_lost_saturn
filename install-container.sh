@@ -9,8 +9,8 @@ echo "$DOCKERLS"
 #
 if [[ $DOCKERLS != "jupyter_container" ]]; then
    docker run  -itd -p 9003:9003 --cap-add=NET_ADMIN --name jupyter_container  jpacerqueira83/jupyter_datascience:latest
-   echo "  wait 12 min  - jupyter_container - full installation/setup in progress "
-   sleep 720
+   echo "  wait 1 min  - jupyter_container - full installation/setup in progress "
+   sleep 60
 fi
 #
 HERES=$(pwd)
