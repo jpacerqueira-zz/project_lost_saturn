@@ -17,7 +17,7 @@ source $HOME/.bashrc
 $HOME/anaconda3/bin/conda init
 $HOME/anaconda3/bin/activate base
 #
-bash install_packages.sh
+sudo bash install_packages.sh
 ####### NOT REQUIRED  ####### bash redirect-h2o.ai.as.9004.sh
 mkdir -p $HOME/library_tools
 mv *.sh $HOME/library_tools
