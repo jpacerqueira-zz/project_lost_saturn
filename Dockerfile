@@ -103,8 +103,7 @@ CMD export HOME=/home/notebookuser
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      sleep 9 ; \
      bash -x $HOME/setup-container-tools.sh .sh ; \
-     sudo chown notebookuser:notebookuser -R $HOME ; \
-     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
+     sudo chown notebookuser:notebookuser -R $HOME ; \ # bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      bash -x $HOME/start-jupyter.sh ; \
      mkdir -p $HOME/crontab ; \
      conda install --quiet --yes \
