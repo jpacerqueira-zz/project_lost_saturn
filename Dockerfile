@@ -138,6 +138,7 @@ CMD export HOME=/home/notebookuser
 #
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      sleep 9 ; \
+     sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/setup-container-tools.sh .sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      mkdir -p $HOME/crontab ; \
