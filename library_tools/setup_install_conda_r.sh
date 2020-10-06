@@ -2,7 +2,7 @@
 # Install R default before libraries
 ####
 OPT_DOCKER_RUN_OUT=$1
-if [[ $OPT_DOCKER_RUN_OU == 1 ]]; then
+if [[ $OPT_DOCKER_RUN_OUT == 1 ]]; then
    conda install --quiet --yes \
       'r-base=3.6.1' \
       'r-rodbc=1.3*' \
@@ -27,7 +27,7 @@ if [[ $OPT_DOCKER_RUN_OU == 1 ]]; then
       'r-hexbin=1.27*' && \
       conda clean -tipsy && \
       fix-permissions $HOME ; \
-elif [[ $OPT_DOCKER_RUN_OU == 0 ]] || [[ $OPT_DOCKER_RUN_OU == 1 ]]; then
+elif [[ $OPT_DOCKER_RUN_OUT == 0 ]] || [[ $OPT_DOCKER_RUN_OUT == 1 ]]; then
      echo -e "## Default repo\nlocal({r <- getOption(\"repos\")\n       r[\"CRAN\"] <- \"http://cran.r-project.org\"\n       options(repos=r)\n})\nSys.setenv(TZ=\"GMT\") " > $HOME/.Rprofile
      conda install --quiet  -y 'r-base=3.6.1' 'r-caret=6.0*'
 else
