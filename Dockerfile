@@ -138,10 +138,10 @@ CMD export HOME=/home/notebookuser
 #
 RUN  sleep 3 ; export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
-     bash -x $HOME/start-jupyter.sh ; \ 
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
-     conda install --quiet --yes \
+     bash -x $HOME/start-jupyter.sh ; \ 
+     $HOME/anaconda3/bin/conda install --quiet --yes \
      'r-base=3.6*' \
      'r-rodbc=1.3*' \
      'unixodbc=2.3.*' \

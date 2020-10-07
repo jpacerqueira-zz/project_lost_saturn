@@ -3,7 +3,7 @@
 ####
 OPT_DOCKER_RUN_OUT=$1
 if [[ $OPT_DOCKER_RUN_OUT == 1 ]]; then
-   conda install --quiet --yes \
+   $HOME/anaconda3/bin/conda install --quiet --yes \
       'r-base=3.6.1' \
       'r-rodbc=1.3*' \
       'unixodbc=2.3.*' \
@@ -29,7 +29,7 @@ if [[ $OPT_DOCKER_RUN_OUT == 1 ]]; then
       fix-permissions $HOME ; \
 elif [[ $OPT_DOCKER_RUN_OUT == 0 ]] || [[ $OPT_DOCKER_RUN_OUT == 1 ]]; then
      echo -e "## Default repo\nlocal({r <- getOption(\"repos\")\n       r[\"CRAN\"] <- \"http://cran.r-project.org\"\n       options(repos=r)\n})\nSys.setenv(TZ=\"GMT\") " > $HOME/.Rprofile
-     conda install --quiet  -y 'r-base=3.6.1' 'r-caret=6.0*'
+     $HOME/anaconda3/bin/conda install --quiet  -y 'r-base=3.6.1' 'r-caret=6.0*'
 else
      echo "Warning : R r-base=3.6 at rist of missing in setup!"
 fi
