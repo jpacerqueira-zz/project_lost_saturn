@@ -18,12 +18,12 @@
 
    Option 2
 === 
-   Run with Docker the container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1)
+   Run with Docker the container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/jupyter_container)
         
 
      Consume and run docker container with iptable port opening process
 
-        ~ mac-u$ docker run  -it -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
+        ~ mac-u$ docker run  -it -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/jupyter_container:stable
 
         
      Run Docker exec to start Jupyter after setup above finishes
