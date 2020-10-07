@@ -8,7 +8,7 @@ DEST_FOLDER=/home/notebookuser/notebooks/
 #
 if [[ $DOCKERLS != "jupyter_container" ]] && [[ -f "$HERES/notebooks/$FILES" ]]; then
    echo "setup ; option1"
-   docker run  -itd -p 9003:9003   --cap-add=NET_ADMIN --name jupyter_container --mount type=bind,source="$(pwd)"/notebooks,target=${DEST_FOLDER}  jpacerqueira83/jupyter_datascience:latest
+   docker run  -itd -p 9003:9003   --cap-add=NET_ADMIN --name jupyter_container --mount type=bind,source="$(pwd)"/notebooks,target=${DEST_FOLDER}  jpacerqueira83/jupyter_datascience:stable
    echo "  wait 1/2 min  - jupyter_container - full setup in progress - STEP1"
    sleep 30
    docker exec -it jupyter_container /bin/bash -c "cd ; source .bashrc ; bash -x start-jupyter.sh ; bash -x stop-jupyter.sh ; sleep 4 ; echo 'setup1: smoke test' "
@@ -16,7 +16,7 @@ if [[ $DOCKERLS != "jupyter_container" ]] && [[ -f "$HERES/notebooks/$FILES" ]];
    docker exec -it jupyter_container /bin/bash -c "cd ; source .bashrc ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; echo 'setup : completed - jupyter token above';  sleep infinity"
 elif [[ $DOCKERLS != "jupyter_container" ]]; then
    echo "setup ; option2"
-   docker run  -itd -p 9003:9003   --cap-add=NET_ADMIN --name jupyter_container jpacerqueira83/jupyter_datascience:latest
+   docker run  -itd -p 9003:9003   --cap-add=NET_ADMIN --name jupyter_container jpacerqueira83/jupyter_datascience:stable
    echo "  wait 1/2 min  - jupyter_container - full setup in progress - STEP1"
    sleep 30
    ARGS1="nbconvert --to notebook --execute --allow-errors --ExecutePreporcessor.timeout=480 notebooks/$FILES "

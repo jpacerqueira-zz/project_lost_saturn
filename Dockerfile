@@ -139,6 +139,7 @@ CMD export HOME=/home/notebookuser
 RUN  sleep 3 ; export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
+     sudo rm -rf /tmp/* ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      bash -x $HOME/start-jupyter.sh ; \ 
      $HOME/anaconda3/bin/conda install --quiet --yes \
