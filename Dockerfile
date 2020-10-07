@@ -138,6 +138,7 @@ CMD export HOME=/home/notebookuser
 #
 RUN  sleep 3 ; export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
+     bash -x $HOME/start-jupyter.sh ; \ 
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      conda install --quiet --yes \
@@ -163,7 +164,8 @@ RUN  sleep 3 ; export HOME=/home/notebookuser ; cd $HOME ; \
      'r-htmlwidgets=1.3*' \
      'r-hexbin=1.27*' && \
      conda clean -tipsy && \
-     fix-permissions $HOME ; \ 
+     fix-permissions $HOME ; \
+     bash -x $HOME/stop-jupyter.sh ; \ 
      mkdir -p $HOME/crontab ; \
      ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 4 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
      sleep 1
