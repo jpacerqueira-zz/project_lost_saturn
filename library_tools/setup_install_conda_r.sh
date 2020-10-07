@@ -43,4 +43,6 @@ pip install gmplot==1.2.0
 pip install folium==0.10.1
 pip install urllib3==1.25.10
 pip install pyweatherbit==2.0.0
+pip install h2o
+pip install findspark
 #
