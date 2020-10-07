@@ -33,10 +33,14 @@ elif [[ $OPT_DOCKER_RUN_OUT == 0 ]] || [[ $OPT_DOCKER_RUN_OUT == 1 ]]; then
 else
      echo "Warning : R r-base=3.6 at rist of missing in setup!"
 fi
+#
+echo -e " install.packages(\"cli\") \n install.packages(\"readr\",repos=\"http://cloud.r-project.org/\", type=\"source\") \n install.packages(\"pracma\") \n install.packages(\"Metrics\") \n install.packages(\"reshape\") \n library(readr) \n sessionInfo() " > $HOME/R_install_packages.R
+R -f $HOME/R_install_packages.R
+#
 pip install rpy2==3.2.7
 pip install pyweatherbit==2.0.0
 pip install gmplot==1.2.0
 pip install folium==0.10.1
+pip install urllib3==1.25.10
+pip install pyweatherbit==2.0.0
 #
-echo -e " install.packages(\"cli\") \n install.packages(\"readr\",repos=\"http://cloud.r-project.org/\", type=\"source\") \n install.packages(\"pracma\") \n install.packages(\"Metrics\") \n install.packages(\"reshape\") \n library(readr) \n sessionInfo() " > $HOME/R_install_packages.R
-R -f $HOME/R_install_packages.R

@@ -6,9 +6,10 @@ echo "$DOCKERLS"
 #
 DOCKERLS=$(docker ps | grep jupyter_container | awk -F' ' '{ print $15 }')
 echo "$DOCKERLS"
+DEST_FOLDER=/home/notebookuser/notebooks/
 #
 if [[ $DOCKERLS != "jupyter_container" ]]; then
-   docker run  -itd -p 9003:9003 --cap-add=NET_ADMIN --name jupyter_container  jpacerqueira83/jupyter_datascience:latest
+   docker run  -itd -p 9003:9003 --cap-add=NET_ADMIN --name jupyter_container --mount type=bind,source="$(pwd)"/notebooks,target=${DEST_FOLDER} jpacerqueira83/jupyter_datascience:latest
    echo "  wait 1 min  - jupyter_container - full installation/setup in progress "
    sleep 60
 fi
