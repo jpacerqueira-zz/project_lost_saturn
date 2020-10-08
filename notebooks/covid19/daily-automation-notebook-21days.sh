@@ -41,7 +41,11 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 #
 #
-cp $HOME/notebooks/covid19/data/World\ v2\ --\ Confirmed\ -\ 63Day\ Forecast\ --\ train\ ${DATENB}.csv $HOME/notebooks/covid19/data/World\ v2\ --\ Confirmed\ -\ 1Day\ Forecast\ --\ train\ ${DATENB}.csv
+#cp $HOME/notebooks/covid19/data/World\ v2\ --\ Confirmed\ -\ 63Day\ Forecast\ --\ train\ ${DATENB}.csv $HOME/notebooks/covid19/data/World\ v2\ --\ Confirmed\ -\ 1Day\ Forecast\ --\ train\ ${DATENB}.csv
+$HOME/anaconda3/bin/jupyter \
+       nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=1800 \
+       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
+       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> crontab-run-$DATENB.log
 #
 rm -rf  /tmp/*
 #
