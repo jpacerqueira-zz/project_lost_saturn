@@ -37,8 +37,24 @@ RUN export DEBIAN_FRONTEND=noninteractive ; \
     python3-pip \
     python3-pyqt5 \
     vim \
-    software-properties-common
+    software-properties-common \
+    cron
 
+RUN ln -fs /usr/share/zoneinfo/GMT+1 /etc/localtime
+
+#Expose notebook cronjobs
+RUN (echo "* * * * * root echo "Hello world" >> /var/log/cron.log 2>&1" > /etc/cron.d/hello-cron ; chmod 0644 /etc/cron.d/hello-cron )
+
+# Apply cron job
+RUN crontab /etc/cron.d/hello-cron
+
+# Create the log file to be able to run tail
+RUN touch /var/log/cron.log
+
+# Run the command on container startup
+CMD cron && tail -f /var/log/cron.log
+
+#Expose notebook cronjobs
 ADD library_tools/*.sh /home/notebookuser/
 
 RUN chmod 777 /home/notebookuser/*.sh
@@ -85,56 +101,16 @@ RUN chmod 777 /home/notebookuser/*.sh
 
 RUN chown notebookuser:notebookuser -R /home/notebookuser
 
-RUN ln -fs /usr/share/zoneinfo/GMT /etc/localtime
-
 EXPOSE 9003/tcp
-#EXPOSE 54321/tcp
+EXPOSE 54321/tcp
 
 RUN export DEBIAN_FRONTEND=interactive
-
-#Expose notebook cronjobs
-RUN (echo "20 6 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh" > /etc/cron.daily/notebooks-jupyter ; chmod 755 /etc/cron.daily/notebooks-jupyter )
 
 USER notebookuser
 
 CMD export HOME=/home/notebookuser
 
 # Anaconda python and R package installer
-#
-#CMD  export HOME=/home/notebookuser ; cd $HOME ; \
-#     sleep 9 ; \
-#     bash -x $HOME/setup-container-tools.sh .sh ; \
-#     sudo chown notebookuser:notebookuser -R $HOME ; \
-#     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
-#     bash -x $HOME/start-jupyter.sh ; \
-#     mkdir -p $HOME/crontab ; \
-#     conda install --quiet --yes \
-#     'r-base=3.5.1' \
-#     'r-rodbc=1.3*' \
-#     'unixodbc=2.3.*' \
-#     'r-irkernel=0.8*' \
-#     'r-plyr=1.8*' \
-#     'r-devtools=1.13*' \
-#     'r-tidyverse=1.2*' \
-#     'r-shiny=1.2*' \
-#     'r-rmarkdown=1.11*' \
-#     'r-forecast=8.2*' \
-#     'r-rsqlite=2.1*' \
-#     'r-reshape2=1.4*' \
-#     'r-nycflights13=1.0*' \
-#     'r-caret=6.0*' \
-#     'r-rcurl=1.95*' \
-#     'r-crayon=1.3*' \
-#     'r-randomforest=4.6*' \
-#     'r-htmltools=0.3*' \
-#     'r-sparklyr=0.9*' \
-#     'r-htmlwidgets=1.2*' \
-#     'r-hexbin=1.27*' && \
-#     conda clean -tipsy && \
-#     fix-permissions $HOME ; \
-#     bash -x $HOME/stop-jupyter.sh ; \
-#     sleep infinity
-#
 #
 RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-container-tools.sh  ; \
@@ -169,7 +145,7 @@ RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
      fix-permissions $HOME ; \
      bash -x $HOME/stop-jupyter.sh ; \ 
      mkdir -p $HOME/crontab ; \
-     ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 4 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
+     ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 5 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
      sleep 1
 #
 CMD sleep 5 ; \
