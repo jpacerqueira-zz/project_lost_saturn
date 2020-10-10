@@ -117,8 +117,8 @@ RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      sleep 2 ; \
      sudo rm -rf /tmp/* ; \
-     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      bash -x $HOME/start-jupyter.sh ; \ 
+     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      $HOME/anaconda3/bin/conda install --quiet --yes \
      'r-base=3.6*' \
      'r-rodbc=1.3*' \
