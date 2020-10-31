@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<head> 
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ 
+ <script>
+ L_NO_TOUCH = false;
+ L_DISABLE_3D = false;
+ </script>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+ <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+ <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+ <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+ 
+ <meta name="viewport" content="width=device-width,
+ initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <style>
+ #map_fdd6fdab927745bfbc3edd51cc2760c7 {
+ position: relative;
+ width: 100.0%;
+ height: 100.0%;
+ left: 0.0%;
+ top: 0.0%;
+ }
+ </style>
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body> 
+ 
+ <div class="folium-map" id="map_fdd6fdab927745bfbc3edd51cc2760c7" ></div>
+ 
+</body>
+<script> 
+ 
+ var map_fdd6fdab927745bfbc3edd51cc2760c7 = L.map(
+ "map_fdd6fdab927745bfbc3edd51cc2760c7",
+ {
+ center: [40.99474, 6.87237],
+ crs: L.CRS.EPSG3857,
+ zoom: 3,
+ zoomControl: true,
+ preferCanvas: false,
+ }
+ );
+
+ 
+
+ 
+ 
+ var tile_layer_ceaadaf191b44e42818573a888beec5c = L.tileLayer(
+ "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+ {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var marker_cluster_84a0841f97c1498aaca648e1acccc297 = L.markerClusterGroup(
+ {}
+ );
+ map_fdd6fdab927745bfbc3edd51cc2760c7.addLayer(marker_cluster_84a0841f97c1498aaca648e1acccc297);
+ 
+ 
+ var marker_5c8279d13c914fe3bf0233b3472f18b8 = L.marker(
+ [-38.4161, -63.6167],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_255d25a35fd64bd0bd8f8073de8e1fce = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+ );
+ marker_5c8279d13c914fe3bf0233b3472f18b8.setIcon(icon_255d25a35fd64bd0bd8f8073de8e1fce);
+ 
+ 
+ var popup_2d8264c401574967b0be757b35affa3e = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_0530c07f161049d9825113dafa53f19e = $(`<div id="html_0530c07f161049d9825113dafa53f19e" style="width: 100.0%; height: 100.0%;">Argentina ConfirmedPred=1843516 1DayChangePred=16324 Date=2020-12-12</div>`)[0];
+ popup_2d8264c401574967b0be757b35affa3e.setContent(html_0530c07f161049d9825113dafa53f19e);
+ 
+
+ marker_5c8279d13c914fe3bf0233b3472f18b8.bindPopup(popup_2d8264c401574967b0be757b35affa3e)
+ ;
+
+ 
+ 
+ 
+ var marker_9145509ba5704cdb8cc5dcdbb862343c = L.marker(
+ [40.0691, 45.0382],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_3fda01cb5c6c4c7cb98c22ff126c9829 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+ );
+ marker_9145509ba5704cdb8cc5dcdbb862343c.setIcon(icon_3fda01cb5c6c4c7cb98c22ff126c9829);
+ 
+ 
+ var popup_f5d873a2090d46d0903590f02f334bbf = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_2ef473da5134452aaee9ed758effcb65 = $(`<div id="html_2ef473da5134452aaee9ed758effcb65" style="width: 100.0%; height: 100.0%;">Armenia ConfirmedPred=169354 1DayChangePred=1940 Date=2020-12-12</div>`)[0];
+ popup_f5d873a2090d46d0903590f02f334bbf.setContent(html_2ef473da5134452aaee9ed758effcb65);
+ 
+
+ marker_9145509ba5704cdb8cc5dcdbb862343c.bindPopup(popup_f5d873a2090d46d0903590f02f334bbf)
+ ;
+
+ 
+ 
+ 
+ var marker_b255a3cd619b482eb3e72cdddc640157 = L.marker(
+ [47.5162, 14.5501],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_72daa54d8f3f4a7780ce77c911e21b3d = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+ );
+ marker_b255a3cd619b482eb3e72cdddc640157.setIcon(icon_72daa54d8f3f4a7780ce77c911e21b3d);
+ 
+ 
+ var popup_12b29ad3fdd64985b6a79279dce9fd20 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_4ae55c4e3999452eb23c533c0a37897e = $(`<div id="html_4ae55c4e3999452eb23c533c0a37897e" style="width: 100.0%; height: 100.0%;">Austria ConfirmedPred=185831 1DayChangePred=2045 Date=2020-12-12</div>`)[0];
+ popup_12b29ad3fdd64985b6a79279dce9fd20.setContent(html_4ae55c4e3999452eb23c533c0a37897e);
+ 
+
+ marker_b255a3cd619b482eb3e72cdddc640157.bindPopup(popup_12b29ad3fdd64985b6a79279dce9fd20)
+ ;
+
+ 
+ 
+ 
+ var marker_bd605d8e26eb49308bd41050c2c309db = L.marker(
+ [23.685, 90.3563],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_a4059e519836448e994c3dcfdb5513b7 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+ );
+ marker_bd605d8e26eb49308bd41050c2c309db.setIcon(icon_a4059e519836448e994c3dcfdb5513b7);
+ 
+ 
+ var popup_35c8707c80294b6d8f9863e69604e1d4 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_83f07bbdf8104ec1946c4c67f966127c = $(`<div id="html_83f07bbdf8104ec1946c4c67f966127c" style="width: 100.0%; height: 100.0%;">Bangladesh ConfirmedPred=659319 1DayChangePred=6023 Date=2020-12-12</div>`)[0];
+ popup_35c8707c80294b6d8f9863e69604e1d4.setContent(html_83f07bbdf8104ec1946c4c67f966127c);
+ 
+
+ marker_bd605d8e26eb49308bd41050c2c309db.bindPopup(popup_35c8707c80294b6d8f9863e69604e1d4)
+ ;
+
+ 
+ 
+ 
+ var marker_1e99e35d71c94c0a86e4e8105ef77e4b = L.marker(
+ [53.7098, 27.9534],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_60343bcd76b34821921bad1f4ac847be = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+ );
+ marker_1e99e35d71c94c0a86e4e8105ef77e4b.setIcon(icon_60343bcd76b34821921bad1f4ac847be);
+ 
+ 
+ var popup_8ff72187618b49eabe47a03c0098cddf = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_20b878437a4d44ec8cf81af9c0a9d44a = $(`<div id="html_20b878437a4d44ec8cf81af9c0a9d44a" style="width: 100.0%; height: 100.0%;">Belarus ConfirmedPred=166839 1DayChangePred=1647 Date=2020-12-12</div>`)[0];
+ popup_8ff72187618b49eabe47a03c0098cddf.setContent(html_20b878437a4d44ec8cf81af9c0a9d44a);
+ 
+
+ marker_1e99e35d71c94c0a86e4e8105ef77e4b.bindPopup(popup_8ff72187618b49eabe47a03c0098cddf)
+ ;
+
+ 
+ 
+ 
+ var marker_3de470aafab349e78f757b3e67b34147 = L.marker(
+ [50.8333, 4.469936],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_05f5180518fa4b059f640f28b2c168f3 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+ );
+ marker_3de470aafab349e78f757b3e67b34147.setIcon(icon_05f5180518fa4b059f640f28b2c168f3);
+ 
+ 
+ var popup_4aa9e7f085b141d28a79a535100cd147 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_f90d704920074a2e91de07d9b9976c5a = $(`<div id="html_f90d704920074a2e91de07d9b9976c5a" style="width: 100.0%; height: 100.0%;">Belgium ConfirmedPred=803863 1DayChangePred=9229 Date=2020-12-12</div>`)[0];
+ popup_4aa9e7f085b141d28a79a535100cd147.setContent(html_f90d704920074a2e91de07d9b9976c5a);
+ 
+
+ marker_3de470aafab349e78f757b3e67b34147.bindPopup(popup_4aa9e7f085b141d28a79a535100cd147)
+ ;
+
+ 
+ 
+ 
+ var marker_90465ec70f444868873ee62d81aa81fc = L.marker(
+ [-16.2902, -63.5887],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_017a47373a2541299f545cf118f7f0a4 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+ );
+ marker_90465ec70f444868873ee62d81aa81fc.setIcon(icon_017a47373a2541299f545cf118f7f0a4);
+ 
+ 
+ var popup_6e02d6172a7549d58367a0f12b38e119 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_33cc1ac9b0d84b4889182baf80165894 = $(`<div id="html_33cc1ac9b0d84b4889182baf80165894" style="width: 100.0%; height: 100.0%;">Bolivia ConfirmedPred=191355 1DayChangePred=1182 Date=2020-12-12</div>`)[0];
+ popup_6e02d6172a7549d58367a0f12b38e119.setContent(html_33cc1ac9b0d84b4889182baf80165894);
+ 
+
+ marker_90465ec70f444868873ee62d81aa81fc.bindPopup(popup_6e02d6172a7549d58367a0f12b38e119)
+ ;
+
+ 
+ 
+ 
+ var marker_d24a74de097644f78f98f995a4ac1842 = L.marker(
+ [-14.235, -51.9253],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_db520a102c494459b8f14db08334afa0 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+ );
+ marker_d24a74de097644f78f98f995a4ac1842.setIcon(icon_db520a102c494459b8f14db08334afa0);
+ 
+ 
+ var popup_241a16d2367b4e49828b53d88678507d = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_1d7bae027e684d5883179183dd82af86 = $(`<div id="html_1d7bae027e684d5883179183dd82af86" style="width: 100.0%; height: 100.0%;">Brazil ConfirmedPred=7650844 1DayChangePred=50836 Date=2020-12-12</div>`)[0];
+ popup_241a16d2367b4e49828b53d88678507d.setContent(html_1d7bae027e684d5883179183dd82af86);
+ 
+
+ marker_d24a74de097644f78f98f995a4ac1842.bindPopup(popup_241a16d2367b4e49828b53d88678507d)
+ ;
+
+ 
+ 
+ 
+ var marker_a4a991aff5bc47c3826a32c944abbb0f = L.marker(
+ [-35.6751, -71.543],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_0e3ed038bf2945ea90cd2b8a9bfada7b = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+ );
+ marker_a4a991aff5bc47c3826a32c944abbb0f.setIcon(icon_0e3ed038bf2945ea90cd2b8a9bfada7b);
+ 
+ 
+ var popup_3dcd3777fbb14b6cb82db8fb10013bf2 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_ea0c45da282144eba6ab1c37d8b76a0d = $(`<div id="html_ea0c45da282144eba6ab1c37d8b76a0d" style="width: 100.0%; height: 100.0%;">Chile ConfirmedPred=654931 1DayChangePred=3483 Date=2020-12-12</div>`)[0];
+ popup_3dcd3777fbb14b6cb82db8fb10013bf2.setContent(html_ea0c45da282144eba6ab1c37d8b76a0d);
+ 
+
+ marker_a4a991aff5bc47c3826a32c944abbb0f.bindPopup(popup_3dcd3777fbb14b6cb82db8fb10013bf2)
+ ;
+
+ 
+ 
+ 
+ var marker_fa73195d29a641c0bb6506dc6bae307b = L.marker(
+ [4.5709, -74.2973],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_6457c3bac4e0487d968352e733f27173 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+ );
+ marker_fa73195d29a641c0bb6506dc6bae307b.setIcon(icon_6457c3bac4e0487d968352e733f27173);
+ 
+ 
+ var popup_7c8a80406ae44a45aec709bb6a5aefd4 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_53cad925c4ff418d80ef8c45becdfd4b = $(`<div id="html_53cad925c4ff418d80ef8c45becdfd4b" style="width: 100.0%; height: 100.0%;">Colombia ConfirmedPred=1950335 1DayChangePred=21368 Date=2020-12-12</div>`)[0];
+ popup_7c8a80406ae44a45aec709bb6a5aefd4.setContent(html_53cad925c4ff418d80ef8c45becdfd4b);
+ 
+
+ marker_fa73195d29a641c0bb6506dc6bae307b.bindPopup(popup_7c8a80406ae44a45aec709bb6a5aefd4)
+ ;
+
+ 
+ 
+ 
+ var marker_886380723ba9467cac1481e171a05930 = L.marker(
+ [9.7489, -83.7534],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_4391d1d8e5ad4123be8192b1e5a2d1da = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+ );
+ marker_886380723ba9467cac1481e171a05930.setIcon(icon_4391d1d8e5ad4123be8192b1e5a2d1da);
+ 
+ 
+ var popup_8067c729df3647faa3d33e6093b345fd = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_081bd213f6ab4246ba23551a95e84359 = $(`<div id="html_081bd213f6ab4246ba23551a95e84359" style="width: 100.0%; height: 100.0%;">Costa Rica ConfirmedPred=183538 1DayChangePred=1773 Date=2020-12-12</div>`)[0];
+ popup_8067c729df3647faa3d33e6093b345fd.setContent(html_081bd213f6ab4246ba23551a95e84359);
+ 
+
+ marker_886380723ba9467cac1481e171a05930.bindPopup(popup_8067c729df3647faa3d33e6093b345fd)
+ ;
+
+ 
+ 
+ 
+ var marker_9b5d408611d24c738694f72bf0e4aad4 = L.marker(
+ [49.8175, 15.472999999999999],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_822b1e7f5dc049199c6821c8633a614a = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+ );
+ marker_9b5d408611d24c738694f72bf0e4aad4.setIcon(icon_822b1e7f5dc049199c6821c8633a614a);
+ 
+ 
+ var popup_73fb490648a6496d952f61ebbffacb2e = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_f417c7501ce04360851ae18679f8a78b = $(`<div id="html_f417c7501ce04360851ae18679f8a78b" style="width: 100.0%; height: 100.0%;">Czechia ConfirmedPred=544022 1DayChangePred=5216 Date=2020-12-12</div>`)[0];
+ popup_73fb490648a6496d952f61ebbffacb2e.setContent(html_f417c7501ce04360851ae18679f8a78b);
+ 
+
+ marker_9b5d408611d24c738694f72bf0e4aad4.bindPopup(popup_73fb490648a6496d952f61ebbffacb2e)
+ ;
+
+ 
+ 
+ 
+ var marker_f859177c093145ae8859cbefd54c93c9 = L.marker(
+ [18.7357, -70.1627],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_0d2def40b37745eb8072102cb79857d7 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+ );
+ marker_f859177c093145ae8859cbefd54c93c9.setIcon(icon_0d2def40b37745eb8072102cb79857d7);
+ 
+ 
+ var popup_c26d1aa0f0cf4f89b08d8791082892b2 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_46c96de6bd844dd4a76509e850d2d009 = $(`<div id="html_46c96de6bd844dd4a76509e850d2d009" style="width: 100.0%; height: 100.0%;">Dominican Republic ConfirmedPred=218937 1DayChangePred=2203 Date=2020-12-12</div>`)[0];
+ popup_c26d1aa0f0cf4f89b08d8791082892b2.setContent(html_46c96de6bd844dd4a76509e850d2d009);
+ 
+
+ marker_f859177c093145ae8859cbefd54c93c9.bindPopup(popup_c26d1aa0f0cf4f89b08d8791082892b2)
+ ;
+
+ 
+ 
+ 
+ var marker_182ea8ae771b4ffeb01a5e25aa04717c = L.marker(
+ [-1.8312, -78.1834],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_18f5b13851c840d995a8ea37dea48145 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+ );
+ marker_182ea8ae771b4ffeb01a5e25aa04717c.setIcon(icon_18f5b13851c840d995a8ea37dea48145);
+ 
+ 
+ var popup_30b9b36b258b414a85f9bdfbb2576bdd = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_47c566b8a65949dbb0a276bd3e35c4d2 = $(`<div id="html_47c566b8a65949dbb0a276bd3e35c4d2" style="width: 100.0%; height: 100.0%;">Ecuador ConfirmedPred=242627 1DayChangePred=1792 Date=2020-12-12</div>`)[0];
+ popup_30b9b36b258b414a85f9bdfbb2576bdd.setContent(html_47c566b8a65949dbb0a276bd3e35c4d2);
+ 
+
+ marker_182ea8ae771b4ffeb01a5e25aa04717c.bindPopup(popup_30b9b36b258b414a85f9bdfbb2576bdd)
+ ;
+
+ 
+ 
+ 
+ var marker_2f51ba1d46e04aee88d3a0b50bef1cd5 = L.marker(
+ [26.820553000000004, 30.802497999999996],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_a9fa58d02fb4427296d49bd8978599ec = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+ );
+ marker_2f51ba1d46e04aee88d3a0b50bef1cd5.setIcon(icon_a9fa58d02fb4427296d49bd8978599ec);
+ 
+ 
+ var popup_aa42b2b63420474d894a7ac1b1486ea7 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_461dad984a7e41d38f6d59ca3adfc197 = $(`<div id="html_461dad984a7e41d38f6d59ca3adfc197" style="width: 100.0%; height: 100.0%;">Egypt ConfirmedPred=192679 1DayChangePred=2030 Date=2020-12-12</div>`)[0];
+ popup_aa42b2b63420474d894a7ac1b1486ea7.setContent(html_461dad984a7e41d38f6d59ca3adfc197);
+ 
+
+ marker_2f51ba1d46e04aee88d3a0b50bef1cd5.bindPopup(popup_aa42b2b63420474d894a7ac1b1486ea7)
+ ;
+
+ 
+ 
+ 
+ var marker_8c75e8608dc3436e9050f2c2909f10a1 = L.marker(
+ [9.145, 40.4897],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_b21a8276d9a5478993623a1867eb1101 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+ );
+ marker_8c75e8608dc3436e9050f2c2909f10a1.setIcon(icon_b21a8276d9a5478993623a1867eb1101);
+ 
+ 
+ var popup_6765a77bdd234798b36eed924d28c7ec = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_0791e89c4e174dceb6da757c613789ee = $(`<div id="html_0791e89c4e174dceb6da757c613789ee" style="width: 100.0%; height: 100.0%;">Ethiopia ConfirmedPred=173833 1DayChangePred=1857 Date=2020-12-12</div>`)[0];
+ popup_6765a77bdd234798b36eed924d28c7ec.setContent(html_0791e89c4e174dceb6da757c613789ee);
+ 
+
+ marker_8c75e8608dc3436e9050f2c2909f10a1.bindPopup(popup_6765a77bdd234798b36eed924d28c7ec)
+ ;
+
+ 
+ 
+ 
+ var marker_b103f4d654d643ed90a4491c34e6e493 = L.marker(
+ [46.2276, 2.2137],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_52617d430a624ba4aa6dfce3685cb142 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+ );
+ marker_b103f4d654d643ed90a4491c34e6e493.setIcon(icon_52617d430a624ba4aa6dfce3685cb142);
+ 
+ 
+ var popup_81923eaf4aa14a53af43db24bd003c07 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_2ab7d63af9cb4754959180a442b855b9 = $(`<div id="html_2ab7d63af9cb4754959180a442b855b9" style="width: 100.0%; height: 100.0%;">France ConfirmedPred=1991754 1DayChangePred=15449 Date=2020-12-12</div>`)[0];
+ popup_81923eaf4aa14a53af43db24bd003c07.setContent(html_2ab7d63af9cb4754959180a442b855b9);
+ 
+
+ marker_b103f4d654d643ed90a4491c34e6e493.bindPopup(popup_81923eaf4aa14a53af43db24bd003c07)
+ ;
+
+ 
+ 
+ 
+ var marker_905ae58a0b814e128fcb665c222b0fa9 = L.marker(
+ [51.165690999999995, 10.451526],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_a2145d1306a44d148fb643aa85983289 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+ );
+ marker_905ae58a0b814e128fcb665c222b0fa9.setIcon(icon_a2145d1306a44d148fb643aa85983289);
+ 
+ 
+ var popup_2eae49cde74c4257b5a1ffa3f88f0727 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_c2764f752228441a83a6665a926895c1 = $(`<div id="html_c2764f752228441a83a6665a926895c1" style="width: 100.0%; height: 100.0%;">Germany ConfirmedPred=1178349 1DayChangePred=15747 Date=2020-12-12</div>`)[0];
+ popup_2eae49cde74c4257b5a1ffa3f88f0727.setContent(html_c2764f752228441a83a6665a926895c1);
+ 
+
+ marker_905ae58a0b814e128fcb665c222b0fa9.bindPopup(popup_2eae49cde74c4257b5a1ffa3f88f0727)
+ ;
+
+ 
+ 
+ 
+ var marker_f57e2de492df4eedbc56bf307f7b35d2 = L.marker(
+ [15.2, -86.2419],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_bd42f346e95145e1a0208ad5fd39faa1 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+ );
+ marker_f57e2de492df4eedbc56bf307f7b35d2.setIcon(icon_bd42f346e95145e1a0208ad5fd39faa1);
+ 
+ 
+ var popup_7cdf8f6cf8d845c588d9123a58932fa9 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_8c7aff83dbee49c9b3daf7b423e54128 = $(`<div id="html_8c7aff83dbee49c9b3daf7b423e54128" style="width: 100.0%; height: 100.0%;">Honduras ConfirmedPred=217131 1DayChangePred=2858 Date=2020-12-12</div>`)[0];
+ popup_7cdf8f6cf8d845c588d9123a58932fa9.setContent(html_8c7aff83dbee49c9b3daf7b423e54128);
+ 
+
+ marker_f57e2de492df4eedbc56bf307f7b35d2.bindPopup(popup_7cdf8f6cf8d845c588d9123a58932fa9)
+ ;
+
+ 
+ 
+ 
+ var marker_05d2573ce0a947e2aac58aeade7908f0 = L.marker(
+ [15.2, -86.2419],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_41c9821767ab421a8ad67cdb2d33d176 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+ );
+ marker_05d2573ce0a947e2aac58aeade7908f0.setIcon(icon_41c9821767ab421a8ad67cdb2d33d176);
+ 
+ 
+ var popup_10b1746c12d44baca880c7f688cfd47d = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_a1b4edb8560d4e03b508a0841934b8ba = $(`<div id="html_a1b4edb8560d4e03b508a0841934b8ba" style="width: 100.0%; height: 100.0%;">Honduras ConfirmedPred=217131 1DayChangePred=2858 Date=2020-12-12</div>`)[0];
+ popup_10b1746c12d44baca880c7f688cfd47d.setContent(html_a1b4edb8560d4e03b508a0841934b8ba);
+ 
+
+ marker_05d2573ce0a947e2aac58aeade7908f0.bindPopup(popup_10b1746c12d44baca880c7f688cfd47d)
+ ;
+
+ 
+ 
+ 
+ var marker_0d9cd8f6c4f14689a8a04bdb5c009760 = L.marker(
+ [20.593684, 78.96288],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_aff50fbda8524a5db9298abbe56a0cf3 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+ );
+ marker_0d9cd8f6c4f14689a8a04bdb5c009760.setIcon(icon_aff50fbda8524a5db9298abbe56a0cf3);
+ 
+ 
+ var popup_024b07739f124dedafc0a0dcfecbd010 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_609f89129e27488994d4317a56fa76b8 = $(`<div id="html_609f89129e27488994d4317a56fa76b8" style="width: 100.0%; height: 100.0%;">India ConfirmedPred=12150585 1DayChangePred=95588 Date=2020-12-12</div>`)[0];
+ popup_024b07739f124dedafc0a0dcfecbd010.setContent(html_609f89129e27488994d4317a56fa76b8);
+ 
+
+ marker_0d9cd8f6c4f14689a8a04bdb5c009760.bindPopup(popup_024b07739f124dedafc0a0dcfecbd010)
+ ;
+
+ 
+ 
+ 
+ var marker_61cd4527c0be4514ae4b8fde73599e1d = L.marker(
+ [-0.7893, 113.9213],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_ded2154da29a4518b7e6a1fb08a791e3 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+ );
+ marker_61cd4527c0be4514ae4b8fde73599e1d.setIcon(icon_ded2154da29a4518b7e6a1fb08a791e3);
+ 
+ 
+ var popup_b0e42374df58444387e7bf62c6d8284d = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_61886050af1c40fcbf483ae683c0df18 = $(`<div id="html_61886050af1c40fcbf483ae683c0df18" style="width: 100.0%; height: 100.0%;">Indonesia ConfirmedPred=673795 1DayChangePred=6350 Date=2020-12-12</div>`)[0];
+ popup_b0e42374df58444387e7bf62c6d8284d.setContent(html_61886050af1c40fcbf483ae683c0df18);
+ 
+
+ marker_61cd4527c0be4514ae4b8fde73599e1d.bindPopup(popup_b0e42374df58444387e7bf62c6d8284d)
+ ;
+
+ 
+ 
+ 
+ var marker_a7f99b16c12341988b22e2d5c5b0ecf9 = L.marker(
+ [32.427908, 53.68804599999999],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_d479cb5c465c4c629c27fdb119b0c7a6 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+ );
+ marker_a7f99b16c12341988b22e2d5c5b0ecf9.setIcon(icon_d479cb5c465c4c629c27fdb119b0c7a6);
+ 
+ 
+ var popup_f52a347a00eb42f0afceaf34b5412cef = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_f50116de85ad4b8382ea88a0dba7600d = $(`<div id="html_f50116de85ad4b8382ea88a0dba7600d" style="width: 100.0%; height: 100.0%;">Iran ConfirmedPred=1082076 1DayChangePred=11342 Date=2020-12-12</div>`)[0];
+ popup_f52a347a00eb42f0afceaf34b5412cef.setContent(html_f50116de85ad4b8382ea88a0dba7600d);
+ 
+
+ marker_a7f99b16c12341988b22e2d5c5b0ecf9.bindPopup(popup_f52a347a00eb42f0afceaf34b5412cef)
+ ;
+
+ 
+ 
+ 
+ var marker_70cea832933547c1ae8f5ee483ea61fa = L.marker(
+ [33.223191, 43.679291],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_417cda7dc14a471b88171208f834f676 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+ );
+ marker_70cea832933547c1ae8f5ee483ea61fa.setIcon(icon_417cda7dc14a471b88171208f834f676);
+ 
+ 
+ var popup_0f8d9acafd3d42859311d0cb3d788467 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_8928804d24f24a77a3b22ca7ce3e06bd = $(`<div id="html_8928804d24f24a77a3b22ca7ce3e06bd" style="width: 100.0%; height: 100.0%;">Iraq ConfirmedPred=957575 1DayChangePred=11587 Date=2020-12-12</div>`)[0];
+ popup_0f8d9acafd3d42859311d0cb3d788467.setContent(html_8928804d24f24a77a3b22ca7ce3e06bd);
+ 
+
+ marker_70cea832933547c1ae8f5ee483ea61fa.bindPopup(popup_0f8d9acafd3d42859311d0cb3d788467)
+ ;
+
+ 
+ 
+ 
+ var marker_4508204e396c498da12b6d8ad2242cef = L.marker(
+ [31.046051000000002, 34.851612],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_87f579b2b533479e977537bf59aaa9f7 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+ );
+ marker_4508204e396c498da12b6d8ad2242cef.setIcon(icon_87f579b2b533479e977537bf59aaa9f7);
+ 
+ 
+ var popup_6e336358a79b4b909ed6c3fe6d8da2a7 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_b61876cbd5b546bab9b4dfc9d51fd7c2 = $(`<div id="html_b61876cbd5b546bab9b4dfc9d51fd7c2" style="width: 100.0%; height: 100.0%;">Israel ConfirmedPred=624128 1DayChangePred=7387 Date=2020-12-12</div>`)[0];
+ popup_6e336358a79b4b909ed6c3fe6d8da2a7.setContent(html_b61876cbd5b546bab9b4dfc9d51fd7c2);
+ 
+
+ marker_4508204e396c498da12b6d8ad2242cef.bindPopup(popup_6e336358a79b4b909ed6c3fe6d8da2a7)
+ ;
+
+ 
+ 
+ 
+ var marker_728285d5d2e7482091bc84da874d715e = L.marker(
+ [41.87194, 12.56738],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_e912b36a11da4ff894eaeb9baef02580 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+ );
+ marker_728285d5d2e7482091bc84da874d715e.setIcon(icon_e912b36a11da4ff894eaeb9baef02580);
+ 
+ 
+ var popup_7a43ddd8bad64408b8f5ddfed6d26921 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_31d01be5263d4171a5fa3d82fbac59a3 = $(`<div id="html_31d01be5263d4171a5fa3d82fbac59a3" style="width: 100.0%; height: 100.0%;">Italy ConfirmedPred=1849326 1DayChangePred=28550 Date=2020-12-12</div>`)[0];
+ popup_7a43ddd8bad64408b8f5ddfed6d26921.setContent(html_31d01be5263d4171a5fa3d82fbac59a3);
+ 
+
+ marker_728285d5d2e7482091bc84da874d715e.bindPopup(popup_7a43ddd8bad64408b8f5ddfed6d26921)
+ ;
+
+ 
+ 
+ 
+ var marker_adc7a195051743c9b4f2a5dd8ca11c70 = L.marker(
+ [48.0196, 66.9237],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_1885c533e8b941368a9ae8188d6fc518 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+ );
+ marker_adc7a195051743c9b4f2a5dd8ca11c70.setIcon(icon_1885c533e8b941368a9ae8188d6fc518);
+ 
+ 
+ var popup_06053b8309e8452d9cd303dc0d7f2223 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_14dbd8c3529f4917aa9ecedf2344b3a3 = $(`<div id="html_14dbd8c3529f4917aa9ecedf2344b3a3" style="width: 100.0%; height: 100.0%;">Kazakhstan ConfirmedPred=209777 1DayChangePred=2327 Date=2020-12-12</div>`)[0];
+ popup_06053b8309e8452d9cd303dc0d7f2223.setContent(html_14dbd8c3529f4917aa9ecedf2344b3a3);
+ 
+
+ marker_adc7a195051743c9b4f2a5dd8ca11c70.bindPopup(popup_06053b8309e8452d9cd303dc0d7f2223)
+ ;
+
+ 
+ 
+ 
+ var marker_652e1c4de5be490a92c20d7843ff2604 = L.marker(
+ [29.311659999999996, 47.481766],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_d5952ed5e153445d89a815f3c9a5c85b = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+ );
+ marker_652e1c4de5be490a92c20d7843ff2604.setIcon(icon_d5952ed5e153445d89a815f3c9a5c85b);
+ 
+ 
+ var popup_5bfcf744836e4333819fd1876369c209 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_0a33d0c7881240ee8a51911a65b2110f = $(`<div id="html_0a33d0c7881240ee8a51911a65b2110f" style="width: 100.0%; height: 100.0%;">Kuwait ConfirmedPred=249814 1DayChangePred=2956 Date=2020-12-12</div>`)[0];
+ popup_5bfcf744836e4333819fd1876369c209.setContent(html_0a33d0c7881240ee8a51911a65b2110f);
+ 
+
+ marker_652e1c4de5be490a92c20d7843ff2604.bindPopup(popup_5bfcf744836e4333819fd1876369c209)
+ ;
+
+ 
+ 
+ 
+ var marker_7d39c7882cde4ec28ee37062c6b5abc0 = L.marker(
+ [33.8547, 35.8623],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_269defd477f74a049842292251a60186 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+ );
+ marker_7d39c7882cde4ec28ee37062c6b5abc0.setIcon(icon_269defd477f74a049842292251a60186);
+ 
+ 
+ var popup_cf7550d233074350bd0bc00ef4e015bf = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_c32993896f9f435f95e498d34d823b0f = $(`<div id="html_c32993896f9f435f95e498d34d823b0f" style="width: 100.0%; height: 100.0%;">Lebanon ConfirmedPred=173182 1DayChangePred=2223 Date=2020-12-12</div>`)[0];
+ popup_cf7550d233074350bd0bc00ef4e015bf.setContent(html_c32993896f9f435f95e498d34d823b0f);
+ 
+
+ marker_7d39c7882cde4ec28ee37062c6b5abc0.bindPopup(popup_cf7550d233074350bd0bc00ef4e015bf)
+ ;
+
+ 
+ 
+ 
+ var marker_214858b5abe54a49ae450b7940462fbd = L.marker(
+ [33.8547, 35.8623],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_bed8d8b8e90a4d34b422556a319f98fe = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+ );
+ marker_214858b5abe54a49ae450b7940462fbd.setIcon(icon_bed8d8b8e90a4d34b422556a319f98fe);
+ 
+ 
+ var popup_31534c133b584fca940f4851038164a2 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_270ee2a8d7744681a6df69280ebfcf61 = $(`<div id="html_270ee2a8d7744681a6df69280ebfcf61" style="width: 100.0%; height: 100.0%;">Lebanon ConfirmedPred=173182 1DayChangePred=2223 Date=2020-12-12</div>`)[0];
+ popup_31534c133b584fca940f4851038164a2.setContent(html_270ee2a8d7744681a6df69280ebfcf61);
+ 
+
+ marker_214858b5abe54a49ae450b7940462fbd.bindPopup(popup_31534c133b584fca940f4851038164a2)
+ ;
+
+ 
+ 
+ 
+ var marker_9e87022f5e9a45b7840be0da07c5a74e = L.marker(
+ [23.6345, -102.5528],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_cc51f878cd454663bed5b31ab3fcc5ee = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+ );
+ marker_9e87022f5e9a45b7840be0da07c5a74e.setIcon(icon_cc51f878cd454663bed5b31ab3fcc5ee);
+ 
+ 
+ var popup_58e9151e260f4601ab0013597dda1f4d = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_478c0c7f439e4b418ec914fa7f99439f = $(`<div id="html_478c0c7f439e4b418ec914fa7f99439f" style="width: 100.0%; height: 100.0%;">Mexico ConfirmedPred=2060621 1DayChangePred=27185 Date=2020-12-12</div>`)[0];
+ popup_58e9151e260f4601ab0013597dda1f4d.setContent(html_478c0c7f439e4b418ec914fa7f99439f);
+ 
+
+ marker_9e87022f5e9a45b7840be0da07c5a74e.bindPopup(popup_58e9151e260f4601ab0013597dda1f4d)
+ ;
+
+ 
+ 
+ 
+ var marker_99f4a91dc8ac402da05daafd77e9b50e = L.marker(
+ [31.7917, -7.0926],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_bd530da49c684422a5f806a1b5304965 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+ );
+ marker_99f4a91dc8ac402da05daafd77e9b50e.setIcon(icon_bd530da49c684422a5f806a1b5304965);
+ 
+ 
+ var popup_3e88e2bf29824866b22bc733d772e8bf = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_d51193af667f4c19985999a97ab156c3 = $(`<div id="html_d51193af667f4c19985999a97ab156c3" style="width: 100.0%; height: 100.0%;">Morocco ConfirmedPred=282861 1DayChangePred=1595 Date=2020-12-12</div>`)[0];
+ popup_3e88e2bf29824866b22bc733d772e8bf.setContent(html_d51193af667f4c19985999a97ab156c3);
+ 
+
+ marker_99f4a91dc8ac402da05daafd77e9b50e.bindPopup(popup_3e88e2bf29824866b22bc733d772e8bf)
+ ;
+
+ 
+ 
+ 
+ var marker_d7a42c6564f7419e8a812f46e13c1e66 = L.marker(
+ [28.1667, 84.25],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_6ba65f8871b14c989a172fb989347124 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+ );
+ marker_d7a42c6564f7419e8a812f46e13c1e66.setIcon(icon_6ba65f8871b14c989a172fb989347124);
+ 
+ 
+ var popup_51d5d1ebba7c4f61a77984c4e7d6e19c = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_b7878b50350e488694d228ed965b3375 = $(`<div id="html_b7878b50350e488694d228ed965b3375" style="width: 100.0%; height: 100.0%;">Nepal ConfirmedPred=303012 1DayChangePred=3208 Date=2020-12-12</div>`)[0];
+ popup_51d5d1ebba7c4f61a77984c4e7d6e19c.setContent(html_b7878b50350e488694d228ed965b3375);
+ 
+
+ marker_d7a42c6564f7419e8a812f46e13c1e66.bindPopup(popup_51d5d1ebba7c4f61a77984c4e7d6e19c)
+ ;
+
+ 
+ 
+ 
+ var marker_a85ee570c4cc406a8456d3a467f1a087 = L.marker(
+ [52.1326, 5.2913],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_8d7279c88a624d6aac84d90c8495e297 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+ );
+ marker_a85ee570c4cc406a8456d3a467f1a087.setIcon(icon_8d7279c88a624d6aac84d90c8495e297);
+ 
+ 
+ var popup_6df00a7d3f414a04986e0667fd7d1be4 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_5cb1ffb83b714d7a90271265918adc66 = $(`<div id="html_5cb1ffb83b714d7a90271265918adc66" style="width: 100.0%; height: 100.0%;">Netherlands ConfirmedPred=564545 1DayChangePred=5292 Date=2020-12-12</div>`)[0];
+ popup_6df00a7d3f414a04986e0667fd7d1be4.setContent(html_5cb1ffb83b714d7a90271265918adc66);
+ 
+
+ marker_a85ee570c4cc406a8456d3a467f1a087.bindPopup(popup_6df00a7d3f414a04986e0667fd7d1be4)
+ ;
+
+ 
+ 
+ 
+ var marker_03a626d4f7584fd085740f85e92a9c17 = L.marker(
+ [21.512583, 55.923255000000005],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_fe686a88331b41dbb839f75a5e5a2d6d = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+ );
+ marker_03a626d4f7584fd085740f85e92a9c17.setIcon(icon_fe686a88331b41dbb839f75a5e5a2d6d);
+ 
+ 
+ var popup_553549c321da4f15920bf62e329b160b = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_aac4862cd84a409aaf556c0d03bcd0d6 = $(`<div id="html_aac4862cd84a409aaf556c0d03bcd0d6" style="width: 100.0%; height: 100.0%;">Oman ConfirmedPred=185058 1DayChangePred=1678 Date=2020-12-12</div>`)[0];
+ popup_553549c321da4f15920bf62e329b160b.setContent(html_aac4862cd84a409aaf556c0d03bcd0d6);
+ 
+
+ marker_03a626d4f7584fd085740f85e92a9c17.bindPopup(popup_553549c321da4f15920bf62e329b160b)
+ ;
+
+ 
+ 
+ 
+ var marker_6144b53c16dd44329181c6d7384885e3 = L.marker(
+ [30.3753, 69.3451],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_1e9e2b62652e4c1aaad5a2658628403c = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+ );
+ marker_6144b53c16dd44329181c6d7384885e3.setIcon(icon_1e9e2b62652e4c1aaad5a2658628403c);
+ 
+ 
+ var popup_e110483d540449349f5f6314594e54a7 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_1764beff9aa7405ea44ecb2e28a5a425 = $(`<div id="html_1764beff9aa7405ea44ecb2e28a5a425" style="width: 100.0%; height: 100.0%;">Pakistan ConfirmedPred=688588 1DayChangePred=8467 Date=2020-12-12</div>`)[0];
+ popup_e110483d540449349f5f6314594e54a7.setContent(html_1764beff9aa7405ea44ecb2e28a5a425);
+ 
+
+ marker_6144b53c16dd44329181c6d7384885e3.bindPopup(popup_e110483d540449349f5f6314594e54a7)
+ ;
+
+ 
+ 
+ 
+ var marker_6a12d52d4fda425da2d9e0aec7a67642 = L.marker(
+ [8.538, -80.7821],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_23b81473cbb64f30b603175b86724b09 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+ );
+ marker_6a12d52d4fda425da2d9e0aec7a67642.setIcon(icon_23b81473cbb64f30b603175b86724b09);
+ 
+ 
+ var popup_0772796ae3e44183b3f4247d4552a60b = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_2895591f74484495ad313331a3683984 = $(`<div id="html_2895591f74484495ad313331a3683984" style="width: 100.0%; height: 100.0%;">Panama ConfirmedPred=239677 1DayChangePred=2535 Date=2020-12-12</div>`)[0];
+ popup_0772796ae3e44183b3f4247d4552a60b.setContent(html_2895591f74484495ad313331a3683984);
+ 
+
+ marker_6a12d52d4fda425da2d9e0aec7a67642.bindPopup(popup_0772796ae3e44183b3f4247d4552a60b)
+ ;
+
+ 
+ 
+ 
+ var marker_0098d5131e3842378afdd6268ed25fb9 = L.marker(
+ [-9.19, -75.0152],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_0cd35eeba64c46e0992181406206ae7b = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+ );
+ marker_0098d5131e3842378afdd6268ed25fb9.setIcon(icon_0cd35eeba64c46e0992181406206ae7b);
+ 
+ 
+ var popup_8e5ba2b8f5934ae8b9d6bc9508096665 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_3a53e831da9e46979bf864dec3ec7ff5 = $(`<div id="html_3a53e831da9e46979bf864dec3ec7ff5" style="width: 100.0%; height: 100.0%;">Peru ConfirmedPred=1334050 1DayChangePred=10395 Date=2020-12-12</div>`)[0];
+ popup_8e5ba2b8f5934ae8b9d6bc9508096665.setContent(html_3a53e831da9e46979bf864dec3ec7ff5);
+ 
+
+ marker_0098d5131e3842378afdd6268ed25fb9.bindPopup(popup_8e5ba2b8f5934ae8b9d6bc9508096665)
+ ;
+
+ 
+ 
+ 
+ var marker_11facd4bb0ae456780ae4e767bad5295 = L.marker(
+ [12.879721, 121.77401699999999],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_a1ce11b2730347edb475b2a39d950f1b = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+ );
+ marker_11facd4bb0ae456780ae4e767bad5295.setIcon(icon_a1ce11b2730347edb475b2a39d950f1b);
+ 
+ 
+ var popup_e666b2fb0a7743fe954784d7652a836e = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_660aec9b4e87463e8972dd2e5d03e7ea = $(`<div id="html_660aec9b4e87463e8972dd2e5d03e7ea" style="width: 100.0%; height: 100.0%;">Philippines ConfirmedPred=616233 1DayChangePred=5652 Date=2020-12-12</div>`)[0];
+ popup_e666b2fb0a7743fe954784d7652a836e.setContent(html_660aec9b4e87463e8972dd2e5d03e7ea);
+ 
+
+ marker_11facd4bb0ae456780ae4e767bad5295.bindPopup(popup_e666b2fb0a7743fe954784d7652a836e)
+ ;
+
+ 
+ 
+ 
+ var marker_6a7bc0953a4941c89c8e6e0bfb81107c = L.marker(
+ [51.9194, 19.1451],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_3d7a17a898264ee38458c1fa971bb349 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+ );
+ marker_6a7bc0953a4941c89c8e6e0bfb81107c.setIcon(icon_3d7a17a898264ee38458c1fa971bb349);
+ 
+ 
+ var popup_d14264cc374249cfa69d5a6ac31f8ad3 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_a41f5d7fd2ff457bbed4911bda9bb531 = $(`<div id="html_a41f5d7fd2ff457bbed4911bda9bb531" style="width: 100.0%; height: 100.0%;">Poland ConfirmedPred=785714 1DayChangePred=10537 Date=2020-12-12</div>`)[0];
+ popup_d14264cc374249cfa69d5a6ac31f8ad3.setContent(html_a41f5d7fd2ff457bbed4911bda9bb531);
+ 
+
+ marker_6a7bc0953a4941c89c8e6e0bfb81107c.bindPopup(popup_d14264cc374249cfa69d5a6ac31f8ad3)
+ ;
+
+ 
+ 
+ 
+ var marker_cff9157435e64061b0c54584b68bd792 = L.marker(
+ [39.3999, -8.2245],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_d5e7a6e723134ab18fc8b12ac8dda996 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+ );
+ marker_cff9157435e64061b0c54584b68bd792.setIcon(icon_d5e7a6e723134ab18fc8b12ac8dda996);
+ 
+ 
+ var popup_994f57723e1a47b1b8576f7ab0140ad8 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_f7d8a6aee00a4d04be7beab26b1c6331 = $(`<div id="html_f7d8a6aee00a4d04be7beab26b1c6331" style="width: 100.0%; height: 100.0%;">Portugal ConfirmedPred=251462 1DayChangePred=2708 Date=2020-12-12</div>`)[0];
+ popup_994f57723e1a47b1b8576f7ab0140ad8.setContent(html_f7d8a6aee00a4d04be7beab26b1c6331);
+ 
+
+ marker_cff9157435e64061b0c54584b68bd792.bindPopup(popup_994f57723e1a47b1b8576f7ab0140ad8)
+ ;
+
+ 
+ 
+ 
+ var marker_d6efb1a5a63e4a7d81478eb8a50b3742 = L.marker(
+ [25.3548, 51.1839],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_198d1c5be9364e628b08a625f784377a = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+ );
+ marker_d6efb1a5a63e4a7d81478eb8a50b3742.setIcon(icon_198d1c5be9364e628b08a625f784377a);
+ 
+ 
+ var popup_4cd5dac4b33e44b3b2e28f1b6d1cc7d4 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_8877adbe36c14b379466bc37de2cd3b6 = $(`<div id="html_8877adbe36c14b379466bc37de2cd3b6" style="width: 100.0%; height: 100.0%;">Qatar ConfirmedPred=231638 1DayChangePred=2354 Date=2020-12-12</div>`)[0];
+ popup_4cd5dac4b33e44b3b2e28f1b6d1cc7d4.setContent(html_8877adbe36c14b379466bc37de2cd3b6);
+ 
+
+ marker_d6efb1a5a63e4a7d81478eb8a50b3742.bindPopup(popup_4cd5dac4b33e44b3b2e28f1b6d1cc7d4)
+ ;
+
+ 
+ 
+ 
+ var marker_887bf1077d3f4b618861a6e7ff12e488 = L.marker(
+ [45.9432, 24.9668],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_386911d447a745f2a21327c58305b393 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+ );
+ marker_887bf1077d3f4b618861a6e7ff12e488.setIcon(icon_386911d447a745f2a21327c58305b393);
+ 
+ 
+ var popup_eefafbbf4cd74c1aa45ed595ade1fbc1 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_b976a0484595482ea8976c43a46d529c = $(`<div id="html_b976a0484595482ea8976c43a46d529c" style="width: 100.0%; height: 100.0%;">Romania ConfirmedPred=427359 1DayChangePred=4547 Date=2020-12-12</div>`)[0];
+ popup_eefafbbf4cd74c1aa45ed595ade1fbc1.setContent(html_b976a0484595482ea8976c43a46d529c);
+ 
+
+ marker_887bf1077d3f4b618861a6e7ff12e488.bindPopup(popup_eefafbbf4cd74c1aa45ed595ade1fbc1)
+ ;
+
+ 
+ 
+ 
+ var marker_c3144666233b4dbd8d2a7e1a58b14c02 = L.marker(
+ [61.52401, 105.31875600000001],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_0f1d22f9ac8940599d1f86321c714c58 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+ );
+ marker_c3144666233b4dbd8d2a7e1a58b14c02.setIcon(icon_0f1d22f9ac8940599d1f86321c714c58);
+ 
+ 
+ var popup_e92971368f304835986d595bcc5b9930 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_1068fb75028844a48a61b3cb9c68f5a2 = $(`<div id="html_1068fb75028844a48a61b3cb9c68f5a2" style="width: 100.0%; height: 100.0%;">Russia ConfirmedPred=2899646 1DayChangePred=31203 Date=2020-12-12</div>`)[0];
+ popup_e92971368f304835986d595bcc5b9930.setContent(html_1068fb75028844a48a61b3cb9c68f5a2);
+ 
+
+ marker_c3144666233b4dbd8d2a7e1a58b14c02.bindPopup(popup_e92971368f304835986d595bcc5b9930)
+ ;
+
+ 
+ 
+ 
+ var marker_814ee013a73f4ae39d8fd372b9350f89 = L.marker(
+ [23.885942, 45.079162],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_ab48da85eede436c9c4617774d3e0e49 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+ );
+ marker_814ee013a73f4ae39d8fd372b9350f89.setIcon(icon_ab48da85eede436c9c4617774d3e0e49);
+ 
+ 
+ var popup_6e98879e0b244908acd5071f9b74f43d = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_acffa6647bb944daaa36fb0928e2c9b5 = $(`<div id="html_acffa6647bb944daaa36fb0928e2c9b5" style="width: 100.0%; height: 100.0%;">Saudi Arabia ConfirmedPred=565679 1DayChangePred=5211 Date=2020-12-12</div>`)[0];
+ popup_6e98879e0b244908acd5071f9b74f43d.setContent(html_acffa6647bb944daaa36fb0928e2c9b5);
+ 
+
+ marker_814ee013a73f4ae39d8fd372b9350f89.bindPopup(popup_6e98879e0b244908acd5071f9b74f43d)
+ ;
+
+ 
+ 
+ 
+ var marker_91a7e1c2ae624ebc86ec8bcc436fb115 = L.marker(
+ [-30.5595, 22.9375],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_055ca577172d41f786d73a462467c39c = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+ );
+ marker_91a7e1c2ae624ebc86ec8bcc436fb115.setIcon(icon_055ca577172d41f786d73a462467c39c);
+ 
+ 
+ var popup_a049f6cdcf11416c8d8d51ab07689f37 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_a3e709aa349747248d5a66e129a0998e = $(`<div id="html_a3e709aa349747248d5a66e129a0998e" style="width: 100.0%; height: 100.0%;">South Africa ConfirmedPred=1396881 1DayChangePred=16031 Date=2020-12-12</div>`)[0];
+ popup_a049f6cdcf11416c8d8d51ab07689f37.setContent(html_a3e709aa349747248d5a66e129a0998e);
+ 
+
+ marker_91a7e1c2ae624ebc86ec8bcc436fb115.bindPopup(popup_a049f6cdcf11416c8d8d51ab07689f37)
+ ;
+
+ 
+ 
+ 
+ var marker_5a1d88c20ef54f4aa43eb6154c1b72d8 = L.marker(
+ [40.463667, -3.7492199999999998],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_f4faf7f56847403eb57ad146682c6971 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+ );
+ marker_5a1d88c20ef54f4aa43eb6154c1b72d8.setIcon(icon_f4faf7f56847403eb57ad146682c6971);
+ 
+ 
+ var popup_f46a927801f14443b0b9f60ee13a8c4a = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_75ebdf835938440cb8a5ac1f4f961e31 = $(`<div id="html_75ebdf835938440cb8a5ac1f4f961e31" style="width: 100.0%; height: 100.0%;">Spain ConfirmedPred=2485523 1DayChangePred=30896 Date=2020-12-12</div>`)[0];
+ popup_f46a927801f14443b0b9f60ee13a8c4a.setContent(html_75ebdf835938440cb8a5ac1f4f961e31);
+ 
+
+ marker_5a1d88c20ef54f4aa43eb6154c1b72d8.bindPopup(popup_f46a927801f14443b0b9f60ee13a8c4a)
+ ;
+
+ 
+ 
+ 
+ var marker_cd8e8cdb4d064a7fa51201b020fb9953 = L.marker(
+ [46.8182, 8.2275],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_95905310e22b443fb3cbe7fc29f88df8 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+ );
+ marker_cd8e8cdb4d064a7fa51201b020fb9953.setIcon(icon_95905310e22b443fb3cbe7fc29f88df8);
+ 
+ 
+ var popup_f60d2a0ac8594681b503be3e1e52fe40 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_712177a43a9748728122dcdd678c81c7 = $(`<div id="html_712177a43a9748728122dcdd678c81c7" style="width: 100.0%; height: 100.0%;">Switzerland ConfirmedPred=281845 1DayChangePred=3009 Date=2020-12-12</div>`)[0];
+ popup_f60d2a0ac8594681b503be3e1e52fe40.setContent(html_712177a43a9748728122dcdd678c81c7);
+ 
+
+ marker_cd8e8cdb4d064a7fa51201b020fb9953.bindPopup(popup_f60d2a0ac8594681b503be3e1e52fe40)
+ ;
+
+ 
+ 
+ 
+ var marker_8819262f78254be68594fef2215b265f = L.marker(
+ [38.9637, 35.2433],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_abb814f0fd8247d59e56662cadaebcd2 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+ );
+ marker_8819262f78254be68594fef2215b265f.setIcon(icon_abb814f0fd8247d59e56662cadaebcd2);
+ 
+ 
+ var popup_1a37c76b23e6487dbd2c0ab16ae98854 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_5543c9bd83054394958da8ab5e5a36b3 = $(`<div id="html_5543c9bd83054394958da8ab5e5a36b3" style="width: 100.0%; height: 100.0%;">Turkey ConfirmedPred=734844 1DayChangePred=8610 Date=2020-12-12</div>`)[0];
+ popup_1a37c76b23e6487dbd2c0ab16ae98854.setContent(html_5543c9bd83054394958da8ab5e5a36b3);
+ 
+
+ marker_8819262f78254be68594fef2215b265f.bindPopup(popup_1a37c76b23e6487dbd2c0ab16ae98854)
+ ;
+
+ 
+ 
+ 
+ var marker_731cb71ce9624bcdb760719237e53c0f = L.marker(
+ [40.0, -100.0],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_e98c212b001a497c94bf3e532d4d8377 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+ );
+ marker_731cb71ce9624bcdb760719237e53c0f.setIcon(icon_e98c212b001a497c94bf3e532d4d8377);
+ 
+ 
+ var popup_af88bd9f19d14218857738c57eba29b5 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_4ba7a71743a447e8a69878231372a6b2 = $(`<div id="html_4ba7a71743a447e8a69878231372a6b2" style="width: 100.0%; height: 100.0%;">United States ConfirmedPred=16761744 1DayChangePred=183686 Date=2020-12-12</div>`)[0];
+ popup_af88bd9f19d14218857738c57eba29b5.setContent(html_4ba7a71743a447e8a69878231372a6b2);
+ 
+
+ marker_731cb71ce9624bcdb760719237e53c0f.bindPopup(popup_af88bd9f19d14218857738c57eba29b5)
+ ;
+
+ 
+ 
+ 
+ var marker_64766aeb9ffd4e1b8beebb583a351a2a = L.marker(
+ [48.3794, 31.1656],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_de3b95bbe3404958ab4a34cc7ed87eea = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+ );
+ marker_64766aeb9ffd4e1b8beebb583a351a2a.setIcon(icon_de3b95bbe3404958ab4a34cc7ed87eea);
+ 
+ 
+ var popup_2d76e917f0ae42398ffb45dba26400e8 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_16e2c039db7241e6bd8c83c29ab3f01e = $(`<div id="html_16e2c039db7241e6bd8c83c29ab3f01e" style="width: 100.0%; height: 100.0%;">Ukraine ConfirmedPred=623499 1DayChangePred=5541 Date=2020-12-12</div>`)[0];
+ popup_2d76e917f0ae42398ffb45dba26400e8.setContent(html_16e2c039db7241e6bd8c83c29ab3f01e);
+ 
+
+ marker_64766aeb9ffd4e1b8beebb583a351a2a.bindPopup(popup_2d76e917f0ae42398ffb45dba26400e8)
+ ;
+
+ 
+ 
+ 
+ var marker_dec46793bbf547b2abe2042ccf248802 = L.marker(
+ [23.424076, 53.847818000000004],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_a90f5b80ab21442c9eee6c230e5dc20b = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+ );
+ marker_dec46793bbf547b2abe2042ccf248802.setIcon(icon_a90f5b80ab21442c9eee6c230e5dc20b);
+ 
+ 
+ var popup_a5bf310aab8b4490b014de08c196d4df = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_bfdb0378abee453aac4dfcc218cadbb0 = $(`<div id="html_bfdb0378abee453aac4dfcc218cadbb0" style="width: 100.0%; height: 100.0%;">United Arab Emirates ConfirmedPred=239998 1DayChangePred=2578 Date=2020-12-12</div>`)[0];
+ popup_a5bf310aab8b4490b014de08c196d4df.setContent(html_bfdb0378abee453aac4dfcc218cadbb0);
+ 
+
+ marker_dec46793bbf547b2abe2042ccf248802.bindPopup(popup_a5bf310aab8b4490b014de08c196d4df)
+ ;
+
+ 
+ 
+ 
+ var marker_c9f9e04375144d8bb3c18488f8da49f8 = L.marker(
+ [55.3781, -3.4360000000000004],
+ {}
+ ).addTo(map_fdd6fdab927745bfbc3edd51cc2760c7);
+ 
+ 
+ var icon_b1551b3fee6d48ffb75cc243b0169c67 = L.AwesomeMarkers.icon(
+ {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+ );
+ marker_c9f9e04375144d8bb3c18488f8da49f8.setIcon(icon_b1551b3fee6d48ffb75cc243b0169c67);
+ 
+ 
+ var popup_dc2d10b109c24dbbae390861ee6b4698 = L.popup({"maxWidth": "100%"});
+
+ 
+ var html_c9f478c345784fac9e38cb1c6bb94783 = $(`<div id="html_c9f478c345784fac9e38cb1c6bb94783" style="width: 100.0%; height: 100.0%;">United Kingdom ConfirmedPred=1880537 1DayChangePred=21170 Date=2020-12-12</div>`)[0];
+ popup_dc2d10b109c24dbbae390861ee6b4698.setContent(html_c9f478c345784fac9e38cb1c6bb94783);
+ 
+
+ marker_c9f9e04375144d8bb3c18488f8da49f8.bindPopup(popup_dc2d10b109c24dbbae390861ee6b4698)
+ ;
+
+ 
+ 
+</script>
