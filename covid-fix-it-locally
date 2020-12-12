@@ -1,0 +1,9 @@
+MYNDATE=$1
+cd notebooks/covid19/data                             
+bash -x automate-daily-analysis-file.sh $MYNDATE
+cd ../heatmaps 
+bash -x automate-daily-sed.sh $MYNDATE
+###
+###cp -rf notebooks/data/delta_daily-covid19-global-analysis/dt=* ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/
+###cd ../project_lost_saturn ; cd notebooks/ ; rm -rf covid19 ; cp -rf ../../Jupyter_Spark_H2O_Kafka_Client_Setup/notebooks/covid19 . ; git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ; cd ../../Jupyter_Spark_H2O_Kafka_Client_Setup
+###git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ;
