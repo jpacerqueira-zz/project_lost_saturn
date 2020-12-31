@@ -76,6 +76,7 @@ RUN mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/data/boston-public-schools ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/korean ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/data ; \
+    mkdir -p  /home/notebookuser/notebooks/covid19/data/archive ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps/archive ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/archive 
@@ -92,6 +93,7 @@ ADD notebooks/data/boston-public-schools/*.*  /home/notebookuser/notebooks/data/
 ADD notebooks/covid19/*.* /home/notebookuser/notebooks/covid19/
 ADD notebooks/covid19/korean/*.* /home/notebookuser/notebooks/covid19/korean/
 ADD notebooks/covid19/data/*.* /home/notebookuser/notebooks/covid19/data/
+ADD notebooks/covid19/data/archive/*.* /home/notebookuser/notebooks/covid19/data/archive/
 ADD notebooks/covid19/heatmaps/*.* /home/notebookuser/notebooks/covid19/heatmaps/
 ADD notebooks/covid19/heatmaps/archive/*.* /home/notebookuser/notebooks/covid19/heatmaps/archive/
 ADD notebooks/covid19/archive/*.* /home/notebookuser/notebooks/covid19/archive/
