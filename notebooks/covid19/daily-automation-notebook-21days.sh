@@ -70,10 +70,14 @@ $HOME/anaconda3/bin/jupyter \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> crontab-run-$DATENB.log
 #
+cd $HOME/notebooks/covid19/data/
+bash -x automate-daily-analysis-file.sh ${DATENB} >> crontab-run-$DATENB.log
+cd $HOME
+#
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-Delta.Lake-version1.0.ipynb \
-       --output $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-Delta.Lake-version1.0_${DATENB}.ipynb >> crontab-run-$DATENB.log
+       $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0.ipynb \
+       --output $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0_${DATENB}.ipynb >> crontab-run-$DATENB.log
 #
 rm -rf  /tmp/*
 #
