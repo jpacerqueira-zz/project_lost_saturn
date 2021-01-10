@@ -31,16 +31,11 @@ cd $HOME/crontab
 DATENB=$(date +'%Y-%m-%d')
 NBLOGFILE=$HOME/crontab/crontab-run-$DATENB.log
 #
+rm -rf  /tmp/*
+sleep 2
 #
-echo "1DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-#
-$HOME/anaconda3/bin/jupyter \
-       nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
-       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> $NBLOGFILE
-#
-echo "14DayForecast" > $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "Start Date : $DATENB" > $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "14DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 #
 # 14DayForecast
@@ -48,11 +43,15 @@ $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v14.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-14dayForecast-output-candidate.ipynb > $NBLOGFILE
+$HOME/anaconda3/bin/jupyter \
+       nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
+       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v14.ipynb  \
+       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-14dayForecast-output-candidate.ipynb >> $NBLOGFILE
 #Ω
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days-displayFuelBigData.html      
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days-displayFuelBigData.html >> $NBLOGFILE
 sleep 1
-#rm -rf  /tmp/*
+rm -rf  /tmp/*
 #
 echo "21DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
@@ -62,11 +61,11 @@ $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-output-candidate.ipynb >> $NBLOGFILE
-#Ω
+#
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days-displayFuelBigData.html
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days-displayFuelBigData.html >> $NBLOGFILE
 sleep 1
-#rm -rf  /tmp/*
+rm -rf  /tmp/*
 #
 echo "42DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
@@ -76,11 +75,11 @@ $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v42.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-42dayForecast-output-candidate.ipynb >> $NBLOGFILE
-#Ω
+#
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days-displayFuelBigData.html
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days-displayFuelBigData.html >> $NBLOGFILE
 sleep 1
-#rm -rf  /tmp/*
+rm -rf  /tmp/*
 #
 echo "63DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
@@ -90,10 +89,11 @@ $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v63.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-63dayForecast-output-candidate.ipynb >> $NBLOGFILE
-#Ω
+#
 mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred63Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred63Days-displayFuelBigData.html
 bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred63Days-displayFuelBigData.html >> $NBLOGFILE
 sleep 1
+rm -rf /tmp/*
 #
 echo "1DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
@@ -102,7 +102,14 @@ $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> $NBLOGFILE
+#Ω
+$HOME/anaconda3/bin/jupyter \
+       nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
+       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
+       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> $NBLOGFILE
 #
+sleep 1
+rm -rf /tmp/*
 cd $HOME/notebooks/covid19/data/
 bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
 cd $HOME
