@@ -112,16 +112,18 @@ sleep 1
 rm -rf /tmp/*
 cd $HOME/notebooks/covid19/data/
 bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
+#Ω
+bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
 cd $HOME
-#
 #
 echo "SparkSQLDeltaLakeAnalysis" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
 #
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0.ipynb \
+       $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-DailyRun.ipynb \
        --output $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0_${DATENB}.ipynb >> $NBLOGFILE
+cp $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0_${DATENB}.ipynb $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0.ipynb 
 #
 rm -rf  /tmp/*
 #
