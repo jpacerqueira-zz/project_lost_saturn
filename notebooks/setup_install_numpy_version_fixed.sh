@@ -1,4 +1,5 @@
 #!/usr/bin/env bash -xe
 #
-pip install numpy==1.16.2
+pip uninstall -y numpy
+pip install numpy==1.16.6
 #
