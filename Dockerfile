@@ -153,6 +153,7 @@ RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
 #
 CMD sleep 5 ; \
     export HOME=/home/notebookuser ; cd $HOME ; \
+    bash -x $HOME/library_tools/R-lang-workarround.sh ; \
     bash -x $HOME/start-jupyter.sh ; \
     sudo service cron reload ; \
     tail -n 30 $HOME/notebooks/jupyter.log ; \
