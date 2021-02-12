@@ -37,7 +37,7 @@ fi
 echo -e " install.packages(\"cli\") \n install.packages(\"readr\",repos=\"http://cloud.r-project.org/\", type=\"source\") \n install.packages(\"pracma\") \n install.packages(\"Metrics\") \n install.packages(\"reshape\") \n library(readr) \n sessionInfo() " > $HOME/R_install_packages.R
 R -f $HOME/R_install_packages.R
 #
-pip install numpy==1.16.5
+pip install numpy==1.16.2
 pip install rpy2==3.2.7
 pip install pyweatherbit==2.0.0
 pip install gmplot==1.2.0
