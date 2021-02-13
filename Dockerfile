@@ -148,7 +148,7 @@ RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
      fix-permissions $HOME ; \
      bash -x $HOME/stop-jupyter.sh ; \ 
      mkdir -p $HOME/crontab ; \
-     ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "55 5 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh") | crontab - ; \
+     ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "46 5  * * * bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh 2>&1") | crontab - ; \
      sleep 1
 #
 CMD sleep 5 ; \
