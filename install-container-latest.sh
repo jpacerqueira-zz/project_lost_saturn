@@ -10,6 +10,7 @@ DEST_FOLDER=/home/notebookuser/notebooks/
 #
 if [[ $DOCKERLS != "jupyter_container" ]]; then
    docker run  -itd -p 9003:9003 --cap-add=NET_ADMIN --name jupyter_container --mount type=bind,source="$(pwd)"/notebooks,target=${DEST_FOLDER} jpacerqueira83/jupyter_datascience:latest-stable-version-3.0.1
+   #docker run  -itd -p 9003:9003 --cap-add=NET_ADMIN --name jupyter_container --mount type=bind,source="$(pwd)"/notebooks,target=${DEST_FOLDER} jpacerqueira83/jupyter_datascience:latest-stable-version-2.4.5
    echo "  wait 1 min  - jupyter_container - full installation/setup in progress "
    sleep 60
 fi
