@@ -12,9 +12,9 @@ cd $HOME
 #echo "spark.1.6"
 #export SPARK_HOME=/opt/cloudera/parcels/CDH/lib/spark
 
-# Spark.2.4.5
-echo "spark.2.4.5"
-export SPARK_HOME=${HOME}/spark/spark-2.4.5-bin-hadoop2.7
+# Spark.3.0.1
+echo "spark.3.0.1"
+export SPARK_HOME=${HOME}/spark/spark-3.0.1-bin-hadoop2.7
 export HADOOP_HOME=${SPARK_HOME}
 export JAVA_HOME=/usr/lib/jvm/default-java
 export PYSPARK_DRIVER_PYTHON=jupyter
@@ -45,7 +45,7 @@ source ~/.bashrc
 #
 ### Workarround for Delta Lake format
 ###
-export PACKAGES="io.delta:delta-core_2.11:0.5.0"
+export PACKAGES="io.delta:delta-core_2.12:0.8.0"
 export PYSPARK_SUBMIT_ARGS="--packages ${PACKAGES}  pyspark-shell"
 ###
 # workarround h2o for http://localhost in notebook session
