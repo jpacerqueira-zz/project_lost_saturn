@@ -41,8 +41,11 @@ bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/
 # 14DayForecast
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v14.ipynb  \
-       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-14dayForecast-output-candidate.ipynb > $NBLOGFILE
+       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v07.ipynb  \
+       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-07dayForecast-output-candidate.ipynb > $NBLOGFILE
+mv $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred7Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred07Days-displayFuelBigData.html      
+bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred07Days-displayFuelBigData.html >> $NBLOGFILE
+sleep 1
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v14.ipynb  \
