@@ -79,7 +79,8 @@ RUN mkdir -p  /home/notebookuser/notebooks/data ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/data/archive ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps ; \
     mkdir -p  /home/notebookuser/notebooks/covid19/heatmaps/archive ; \
-    mkdir -p  /home/notebookuser/notebooks/covid19/archive 
+    mkdir -p  /home/notebookuser/notebooks/covid19/archive
+#    mkdir -p  /home/notebookuser/notebooks/covid19/daily_run 
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/
@@ -97,6 +98,7 @@ ADD notebooks/covid19/data/archive/*.* /home/notebookuser/notebooks/covid19/data
 ADD notebooks/covid19/heatmaps/*.* /home/notebookuser/notebooks/covid19/heatmaps/
 ADD notebooks/covid19/heatmaps/archive/*.* /home/notebookuser/notebooks/covid19/heatmaps/archive/
 ADD notebooks/covid19/archive/*.* /home/notebookuser/notebooks/covid19/archive/
+#ADD notebooks/covid19/daily_run/*.* /home/notebookuser/notebooks/covid19/daily_run/
 
 ADD setup-container-tools.sh /home/notebookuser/setup-container-tools.sh
 
