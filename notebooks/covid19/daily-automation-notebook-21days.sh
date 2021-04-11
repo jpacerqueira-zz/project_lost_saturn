@@ -30,13 +30,15 @@ source $HOME/.profile
 cd $HOME/crontab
 DATENB=$(date +'%Y-%m-%d')
 NBLOGFILE=$HOME/crontab/crontab-run-$DATENB.log
+ADDRESSPUBLIC=$HOME/notebooks/covid19/my-public-address-$DATENB.txt
 #
 rm -rf  /tmp/*
 sleep 2
 #
-echo "Start Date : $DATENB" > $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-echo "07DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "-" > $ADDRESSPUBLIC
+echo "Start Date : $DATENB" >> $ADDRESSPUBLIC
+echo "07DayForecast" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 # 07DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -48,8 +50,8 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf  /tmp/*
 #
-echo "14DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "14DayForecast" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 # 14DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -63,8 +65,8 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf  /tmp/*
 #
-echo "21DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "21DayForecast" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 # 21DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -77,8 +79,8 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf  /tmp/*
 #
-echo "42DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "42DayForecast" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 # 42DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -91,8 +93,8 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf  /tmp/*
 #
-echo "63DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "63DayForecast" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 # 63DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -105,8 +107,8 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf /tmp/*
 #
-echo "1DayForecast" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "01DayForecast" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
@@ -126,8 +128,8 @@ bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
 bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
 cd $HOME
 #
-echo "SparkSQLDeltaLakeAnalysis" >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
-bash -x $HOME/notebooks/covid19/my-public-address.sh >> $HOME/notebooks/covid19/my-public-address-$DATENB.txt
+echo "SparkSQLDeltaLakeCovid19DailyAnalysis" >> $ADDRESSPUBLIC
+bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
@@ -136,4 +138,7 @@ $HOME/anaconda3/bin/jupyter \
 cp $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0_${DATENB}.ipynb $HOME/notebooks/covid19/Daily-Covid19-Analysis-Spark-SQL-DeltaLake-version1.0.ipynb 
 #
 rm -rf  /tmp/*
+#
+echo "-" >> $ADDRESSPUBLIC
+cat $ADDRESSPUBLIC
 #
