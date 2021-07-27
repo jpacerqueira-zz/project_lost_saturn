@@ -105,3 +105,5 @@
   [Spark Structure Streaming Programming with Delta Late](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
     
   If you are a proeficient Data Engineer/Scientist use as it is, improve it, fix it, share it back!
+
+===
