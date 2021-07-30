@@ -115,11 +115,6 @@ $HOME/anaconda3/bin/jupyter \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> $NBLOGFILE
 #
-$HOME/anaconda3/bin/jupyter \
-       nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data.ipynb  \
-       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast-data-output.ipynb >> $NBLOGFILE
-#
 sleep 1
 rm -rf /tmp/*
 #Ω
