@@ -120,8 +120,8 @@ rm -rf /tmp/*
 #Ω
 $HOME/anaconda3/bin/jupyter \
        nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data_drop237d.ipynb  \
-       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast_drop237days.ipynb >> $NBLOGFILE
+       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data_drop447d.ipynb  \
+       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast_drop447days.ipynb >> $NBLOGFILE
 #
 cd $HOME/notebooks/covid19/data/
 bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
