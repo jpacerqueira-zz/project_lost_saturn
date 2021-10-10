@@ -107,7 +107,7 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf /tmp/*
 #
-echo "01DayForecast" >> $ADDRESSPUBLIC
+echo "01DayForecast - drop 442 days" >> $ADDRESSPUBLIC
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 $HOME/anaconda3/bin/jupyter \
@@ -117,11 +117,6 @@ $HOME/anaconda3/bin/jupyter \
 #
 sleep 1
 rm -rf /tmp/*
-#Ω
-$HOME/anaconda3/bin/jupyter \
-       nbconvert --to notebook --execute --allow-errors --ExecutePreprocessor.timeout=3600 \
-       $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v1data_drop447d.ipynb  \
-       --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-1dayForecast_drop447days.ipynb >> $NBLOGFILE
 #
 cd $HOME/notebooks/covid19/data/
 bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
