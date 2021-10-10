@@ -119,9 +119,10 @@ sleep 1
 rm -rf /tmp/*
 #
 cd $HOME/notebooks/covid19/data/
-bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
+DROP_NDAYS=447
+bash -x automate-daily-analysis-file.sh ${DATENB} ${DROP_NDAYS} >> $NBLOGFILE
 #Ω
-bash -x automate-daily-analysis-file.sh ${DATENB} >> $NBLOGFILE
+bash -x automate-daily-analysis-file.sh ${DATENB} ${DROP_NDAYS} >> $NBLOGFILE
 cd $HOME
 #
 echo "SparkSQLDeltaLakeCovid19DailyAnalysis" >> $ADDRESSPUBLIC
