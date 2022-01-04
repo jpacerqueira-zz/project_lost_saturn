@@ -107,7 +107,7 @@ bash -x $HOME/notebooks/covid19/heatmaps/sed-format-fit-website.sh $HOME/noteboo
 sleep 1
 rm -rf /tmp/*
 #
-echo "01DayForecast - drop 480 days" >> $ADDRESSPUBLIC
+echo "01DayForecast - drop 520 days" >> $ADDRESSPUBLIC
 bash -x $HOME/notebooks/covid19/my-public-address.sh >> $ADDRESSPUBLIC
 #
 $HOME/anaconda3/bin/jupyter \
@@ -119,7 +119,7 @@ sleep 1
 rm -rf /tmp/*
 #
 cd $HOME/notebooks/covid19/data/
-DROP_NDAYS=495
+DROP_NDAYS=529
 bash -x automate-daily-analysis-file.sh ${DATENB} ${DROP_NDAYS} >> $NBLOGFILE
 #Ω
 bash -x automate-daily-analysis-file.sh ${DATENB} ${DROP_NDAYS} >> $NBLOGFILE
