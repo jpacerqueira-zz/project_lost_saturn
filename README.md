@@ -18,7 +18,7 @@
 
    Option 2
 === 
-   Run with Docker the container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/jupyter_container)
+   Run with Docker the container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/jupyter_datascience)
         
 
      Consume and run docker container with iptable port opening process
