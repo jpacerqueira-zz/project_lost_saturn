@@ -119,7 +119,7 @@ sleep 1
 rm -rf /tmp/*
 #
 cd $HOME/notebooks/covid19/data/
-DROP_NDAYS=529
+DROP_NDAYS=520
 bash -x automate-daily-analysis-file.sh ${DATENB} ${DROP_NDAYS} >> $NBLOGFILE
 #Ω
 bash -x automate-daily-analysis-file.sh ${DATENB} ${DROP_NDAYS} >> $NBLOGFILE
